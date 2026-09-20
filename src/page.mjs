@@ -29,7 +29,7 @@ const ic = {
 const BARS = [12, 26, 44, 66, 100, 66, 44, 26, 12];
 const wave = (cls = '') => `<div class="wave ${cls}" aria-hidden="true"><i class="wave-line"></i><span class="wave-bars">${BARS.map((h, i) => `<b style="--h:${h}%;--i:${i}"></b>`).join('')}</span><i class="wave-line"></i></div>`;
 
-function head({ t, cfg, lang, langs, pathOf, page = '', title, description, noindex = false, jsonld = [] }) {
+function head({ t, cfg, lang, langs, pathOf, v, page = '', title, description, noindex = false, jsonld = [] }) {
   const url = cfg.siteUrl + pathOf(lang) + page;
   const alternates = noindex ? '' : langs.map((l) => `<link rel="alternate" hreflang="${l}" href="${cfg.siteUrl}${pathOf(l)}${page}">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${pathOf('en')}${page}">`;
   return `<!doctype html>
@@ -65,9 +65,9 @@ function head({ t, cfg, lang, langs, pathOf, page = '', title, description, noin
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preload" as="image" href="/assets/logo-emblem.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/styles.css?v=${v}">
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
-  ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n  ')}
+  ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n  ')}
 </head>`;
 }
 
@@ -94,8 +94,12 @@ function header({ t, lang, langs, pathOf, home = '' }) {
 </header>`;
 }
 
+// WhatsApp only appears once a real number is configured
+export const hasWhatsapp = (cfg) => !/^0*$|0000000$/.test(cfg.contact.whatsapp || '');
+
 function footer({ t, cfg, lang, pathOf }) {
   const c = cfg.contact;
+  const wa = hasWhatsapp(cfg);
   return `
 <footer class="site-footer">
   <div class="wrap footer-grid">
@@ -118,7 +122,7 @@ function footer({ t, cfg, lang, pathOf }) {
     </div>
     <div>
       <h3>${t.ft.contact}</h3>
-      <a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener">${ic.wa}<span>${c.whatsappDisplay}</span></a>
+      ${wa ? `<a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener">${ic.wa}<span>${c.whatsappDisplay}</span></a>` : ``}
       <a href="mailto:${c.email}">${ic.mail}<span>${c.email}</span></a>
       <a href="${c.instagram}" target="_blank" rel="noopener">${ic.ig}<span>Instagram</span></a>
     </div>
@@ -135,7 +139,7 @@ export function renderHome(ctx) {
   const I = cfg.images;
   const p = cfg.pricing;
   const c = cfg.contact;
-  const placeholderPhone = /0000000$/.test(c.whatsapp);
+  const placeholderPhone = !hasWhatsapp(cfg);
 
   const business = {
     '@context': 'https://schema.org',
@@ -184,8 +188,8 @@ export function renderHome(ctx) {
     pricing: cfg.pricing,
     addons: { hookah: { price: cfg.addons.hookah.price, name: t.pk.hookahT, desc: t.pk.hookahD }, bottle: { price: cfg.addons.bottle.price, name: t.pk.bottleT, desc: t.pk.bottleD } },
     schedule: cfg.schedule,
-    whatsapp: c.whatsapp,
-    t: { ...t.bk, days: t.days, perTable: t.pk.perTable, pvOk: t.pv.ok, pvErr: t.pv.err, pvSending: t.pv.sending, pvSend: t.pv.send },
+    contact: { whatsapp: placeholderPhone ? '' : c.whatsapp, email: c.email },
+    t: { ...t.bk, days: t.days, perTable: t.pk.perTable, pvOk: t.pv.ok, pvErr: t.pv.err, pvSending: t.pv.sending, pvSend: t.pv.send, mailFallback: t.bk.mailFallback },
   };
 
   return `${head({ ...ctx, title: t.meta.title, description: t.meta.description, jsonld: [business, faqLd, siteLd] })}
@@ -207,7 +211,7 @@ export function renderHome(ctx) {
   <button class="intro-skip" id="introSkip" tabindex="-1">${t.intro.skip}</button>
 </div>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">${t.nav.skip}</a>
 ${header(ctx)}
 
 <main id="main">
@@ -411,7 +415,7 @@ ${header(ctx)}
 ${footer(ctx)}
 
 <div class="sticky-book" id="stickyBook"><span>${t.sticky.from}</span><button class="btn btn-gold btn-sm" data-book>${t.sticky.book}</button></div>
-<a class="wa-float" href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener" aria-label="${esc(t.ft.wa)}">${ic.wa}</a>
+${placeholderPhone ? `` : `<a class="wa-float" href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener" aria-label="${esc(t.ft.wa)}">${ic.wa}</a>`}
 
 <dialog class="bk" id="bk" aria-labelledby="bkTitle">
   <div class="bk-shell">
@@ -434,7 +438,7 @@ ${footer(ctx)}
 </dialog>
 
 <script id="amb-data" type="application/json">${JSON.stringify(clientData).replace(/</g, '\\u003c')}</script>
-<script src="/assets/app.js" defer></script>
+<script src="/assets/app.js?v=${ctx.v}" defer></script>
 </body>
 </html>`;
 }
@@ -448,8 +452,8 @@ ${header({ ...ctx, home: pathOf(lang) })}
   <div class="wrap narrow ok-card">
     <div class="ok-emblem"><img src="/assets/logo-emblem.png" alt="" width="720" height="580"><i class="sheen" style="--mask:url(/assets/logo-emblem.png)"></i></div>
     ${wave('wave-live')}
-    <h1>${t.ok.title}</h1>
-    <p>${t.ok.p}</p>
+    <h1 id="okTitle">${t.ok.title}</h1>
+    <p id="okText">${t.ok.p}</p>
     <dl class="ok-sum" id="okSum" hidden>
       <div><dt>${t.ok.when}</dt><dd data-ok="date"></dd></div>
       <div><dt>${t.ok.guests}</dt><dd data-ok="guests"></dd></div>
@@ -458,16 +462,25 @@ ${header({ ...ctx, home: pathOf(lang) })}
     <ul class="ticks">${t.ok.tips.map((x) => `<li>${ic.check}<span>${x}</span></li>`).join('')}</ul>
     <div class="hero-cta">
       <a class="btn btn-gold" href="${pathOf(lang)}">${t.ok.home}</a>
-      <a class="btn btn-line" href="https://wa.me/${cfg.contact.whatsapp}" target="_blank" rel="noopener">${ic.wa}${t.ok.cal}</a>
+      ${hasWhatsapp(cfg) ? `<a class="btn btn-line" href="https://wa.me/${cfg.contact.whatsapp}" target="_blank" rel="noopener">${ic.wa}${t.ok.cal}</a>` : `<a class="btn btn-line" href="mailto:${cfg.contact.email}">${ic.mail}${cfg.contact.email}</a>`}
     </div>
   </div>
 </main>
 ${footer(ctx)}
-<script src="/assets/app.js" defer></script>
+<script src="/assets/app.js?v=${ctx.v}" defer></script>
 <script>
-(function(){try{var b=JSON.parse(sessionStorage.getItem('amb-booking')||'null');if(!b)return;var el=document.getElementById('okSum');el.hidden=false;
-['date','guests','total'].forEach(function(k){el.querySelector('[data-ok="'+k+'"]').textContent=b[k]});sessionStorage.removeItem('amb-booking')}catch(e){}
-document.querySelectorAll('[data-year]').forEach(function(n){n.textContent=new Date().getFullYear()})})();
+(function(){
+  var el=document.getElementById('okSum'),lang=${JSON.stringify(lang)};
+  function show(b){if(!b)return;el.hidden=false;['date','guests','total'].forEach(function(k){el.querySelector('[data-ok="'+k+'"]').textContent=b[k]})}
+  var saved=null;try{saved=JSON.parse(sessionStorage.getItem('amb-booking')||'null');sessionStorage.removeItem('amb-booking');sessionStorage.removeItem('amb-draft')}catch(e){}
+  var id=new URLSearchParams(location.search).get('session_id');
+  if(!id)return show(saved);
+  fetch('/api/confirm-booking?session_id='+encodeURIComponent(id)).then(function(r){return r.json().then(function(j){return{ok:r.ok,status:r.status,j:j}})}).then(function(res){
+    if(res.ok){var d=res.j.date.split('-');return show({date:new Intl.DateTimeFormat(lang,{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(+d[0],+d[1]-1,+d[2]))),guests:String(res.j.guests),total:'$'+Number(res.j.total).toLocaleString('en-US')})}
+    if(res.status===400||res.status===402||res.status===404){document.getElementById('okTitle').textContent=${JSON.stringify(t.ok.unverifiedTitle)};document.getElementById('okText').textContent=${JSON.stringify(t.ok.unverified)};return}
+    show(saved)
+  }).catch(function(){show(saved)});
+})();
 </script>
 </body>
 </html>`;
@@ -487,7 +500,7 @@ ${header({ ...ctx, home: pathOf(lang) })}
   </div>
 </main>
 ${footer(ctx)}
-<script src="/assets/app.js" defer></script>
+<script src="/assets/app.js?v=${ctx.v}" defer></script>
 </body>
 </html>`;
 }

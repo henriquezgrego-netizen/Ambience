@@ -1,10 +1,10 @@
 // Local preview server: serves dist/ and mocks the /api endpoints (no Stripe, no real payments).
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
-import { join, extname, normalize } from 'node:path';
+import { join, extname, resolve, sep } from 'node:path';
 
 const PORT = process.env.PORT || 4173;
-const ROOT = 'dist';
+const ROOT = resolve('dist');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.ico': 'image/x-icon', '.xml': 'application/xml', '.txt': 'text/plain', '.webmanifest': 'application/manifest+json' };
 const json = (res, code, obj) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(obj)); };
 
@@ -29,9 +29,10 @@ createServer(async (req, res) => {
     return setTimeout(() => json(res, 200, { url: `${lang && lang !== 'en' ? `/${lang}` : ''}/booking/success/?demo=1` }), 900);
   }
   if (req.method === 'POST') { res.writeHead(200); return res.end('ok'); } // Netlify Forms stand-in
-  const p = normalize(decodeURIComponent(url.pathname)).replace(/^([/\\])+/, '');
-  let file = join(ROOT, p);
   try {
+    // resolve inside dist/ only — never follow ../ out of the site folder
+    let file = resolve(ROOT, '.' + decodeURIComponent(url.pathname));
+    if (file !== ROOT && !file.startsWith(ROOT + sep)) throw new Error('outside root');
     if ((await stat(file)).isDirectory()) file = join(file, 'index.html');
     const data = await readFile(file);
     res.writeHead(200, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });

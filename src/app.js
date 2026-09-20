@@ -23,6 +23,10 @@
     el.addEventListener('click', function () {
       clearTimeout(timer);
       body.classList.add('intro-skipped');
+      // running animations keep the long delay they started with — restart them so the hero appears right away
+      $$('.hero h1 .eyebrow, .hero-title > span, .hero-sub, .hero-cta, .hero-price').forEach(function (n) {
+        n.style.animation = 'none'; void n.offsetWidth; n.style.animation = '';
+      });
       done();
     });
   })();
@@ -40,12 +44,17 @@
 
   var burger = $('#burger');
   var nav = $('#nav');
-  var closeNav = function () { if (nav) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); } };
-  if (burger) {
-    burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', String(open));
-    });
+  var setNav = function (open) {
+    if (!nav || !burger) return;
+    nav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+  };
+  var closeNav = function () { setNav(false); };
+  if (burger && nav) {
+    burger.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { closeNav(); burger.focus(); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1180) closeNav(); });
     nav.addEventListener('click', function (e) { if (e.target.closest('a, button')) closeNav(); });
   }
 
@@ -111,6 +120,7 @@
   var tr = function (s, v) { return String(s).replace(/\{(\w+)\}/g, function (m, k) { return v && k in v ? v[k] : m; }); };
 
   var pv = $('#pvForm');
+  if (pv && pv.elements.date) pv.elements.date.min = new Date().toISOString().slice(0, 10);
   if (pv) pv.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = $('button[type=submit]', pv), msg = $('.form-msg', pv), label = btn.innerHTML;
@@ -123,7 +133,15 @@
 
   /* ---------- booking ---------- */
   var dlg = $('#bk');
-  if (!dlg || !dlg.showModal) return;
+  if (!dlg) return;
+  var contactUrl = function (text) {
+    return D.contact.whatsapp ? 'https://wa.me/' + D.contact.whatsapp + '?text=' + encodeURIComponent(text)
+      : 'mailto:' + D.contact.email + '?subject=' + encodeURIComponent(T.title) + '&body=' + encodeURIComponent(text);
+  };
+  if (!dlg.showModal) {
+    document.addEventListener('click', function (e) { if (e.target.closest('[data-book]')) { e.preventDefault(); window.location.href = contactUrl(T.title); } });
+    return;
+  }
   var elBody = $('#bkBody'), elSum = $('#bkSum'), elErr = $('#bkErr'), elNext = $('#bkNext'), elBack = $('#bkBack'), elSteps = $$('#bkSteps li');
   var ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   var LOCK = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>';
@@ -144,7 +162,23 @@
   var maxDate = addDays(now.ymd, D.schedule.bookAheadDays);
   var longDate = function (ymd) { return new Intl.DateTimeFormat(D.lang, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(toDate(ymd)); };
 
-  var S = { step: 1, date: null, guests: 2, addons: { hookah: 0, bottle: 0 }, f: { name: '', email: '', phone: '', stay: '', note: '', age: false, terms: false }, booked: {}, demo: false, month: toDate(minDate.slice(0, 8) + '01'), loaded: false, busy: false };
+  var firstEvening = minDate;
+  for (var fe = 0; fe < 8 && D.schedule.weekdays.indexOf(toDate(firstEvening).getUTCDay()) < 0; fe++) firstEvening = addDays(firstEvening, 1);
+  var S = { step: 1, date: null, guests: 2, addons: { hookah: 0, bottle: 0 }, f: { name: '', email: '', phone: '', stay: '', note: '', age: false, terms: false }, booked: {}, demo: false, month: toDate(firstEvening.slice(0, 8) + '01'), loaded: false, busy: false };
+
+  var DRAFT = 'amb-draft';
+  var saveDraft = function () { try { sessionStorage.setItem(DRAFT, JSON.stringify({ date: S.date, guests: S.guests, addons: S.addons, f: S.f })); } catch (e) {} };
+  var loadDraft = function () {
+    try {
+      var d = JSON.parse(sessionStorage.getItem(DRAFT) || 'null');
+      if (!d) return false;
+      if (d.date && isEventDay(d.date)) { S.date = d.date; S.month = toDate(d.date.slice(0, 8) + '01'); }
+      S.guests = Math.max(1, Math.min(D.capacity, parseInt(d.guests, 10) || 2));
+      ['hookah', 'bottle'].forEach(function (k) { S.addons[k] = Math.max(0, Math.min(4, parseInt(d.addons && d.addons[k], 10) || 0)); });
+      Object.keys(S.f).forEach(function (k) { if (d.f && typeof d.f[k] === typeof S.f[k]) S.f[k] = d.f[k]; });
+      return true;
+    } catch (e) { return false; }
+  };
 
   var remaining = function (ymd) { return Math.max(0, D.capacity - (S.booked[ymd] || 0)); };
   var isEventDay = function (ymd) { return ymd >= minDate && ymd <= maxDate && D.schedule.weekdays.indexOf(toDate(ymd).getUTCDay()) > -1; };
@@ -159,7 +193,11 @@
 
   function loadAvailability() {
     return fetch('/api/availability').then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function (j) { S.booked = j.booked || {}; S.demo = !!j.demo; })
+      .then(function (j) {
+        S.booked = j.booked || {}; S.demo = !!j.demo;
+        if (S.date && remaining(S.date) === 0) S.date = null;
+        S.guests = Math.max(1, Math.min(S.guests, maxGuests()));
+      })
       .catch(function () { S.booked = {}; })
       .then(function () { S.loaded = true; });
   }
@@ -188,13 +226,14 @@
     return h;
   }
 
-  function stepper(key, val, min, max) {
-    return '<div class="stepper"><button type="button" data-step-key="' + key + '" data-dir="-1" aria-label="−"' + (val <= min ? ' disabled' : '') + '>−</button><output>' + val + '</output><button type="button" data-step-key="' + key + '" data-dir="1" aria-label="+"' + (val >= max ? ' disabled' : '') + '>+</button></div>';
+  function stepper(key, val, min, max, label) {
+    label = esc(label || '');
+    return '<div class="stepper" role="group" aria-label="' + label + '"><button type="button" data-step-key="' + key + '" data-dir="-1" aria-label="' + label + ' −1"' + (val <= min ? ' disabled' : '') + '>−</button><output aria-live="polite">' + val + '</output><button type="button" data-step-key="' + key + '" data-dir="1" aria-label="' + label + ' +1"' + (val >= max ? ' disabled' : '') + '>+</button></div>';
   }
 
   function guestBox() {
     var p = D.pricing, tk = tickets(S.guests), r = S.guests % p.groupSize, h = '';
-    h += '<div class="guest-box"><h4>' + T.guests + '</h4>' + stepper('guests', S.guests, 1, maxGuests());
+    h += '<div class="guest-box"><h4>' + T.guests + '</h4>' + stepper('guests', S.guests, 1, Math.max(1, maxGuests()), T.guests);
     h += '<p class="guest-hint">' + T.guestsHint + '</p>';
     if (S.date) { var left = remaining(S.date); h += '<p class="seat-note' + (left <= 6 ? ' few' : '') + '">' + tr(T.left, { n: left }) + '</p>'; }
     if (tk.group) h += '<p class="nudge ok">✓ ' + T.groupApplied + '</p>';
@@ -210,7 +249,7 @@
       var h = '<div class="bk-pane"><h3>' + T.upT + '</h3><p>' + T.upLead + '</p>';
       ['hookah', 'bottle'].forEach(function (k) {
         var a = D.addons[k], q = S.addons[k];
-        h += '<div class="addon' + (q ? ' active' : '') + '"><div><h4>' + a.name + '</h4><p>' + a.desc + '</p><p class="a-price"><b>' + money(a.price) + '</b>' + T.perTable + '</p></div>' + stepper(k, q, 0, 4) + '</div>';
+        h += '<div class="addon' + (q ? ' active' : '') + '"><div><h4>' + a.name + '</h4><p>' + a.desc + '</p><p class="a-price"><b>' + money(a.price) + '</b>' + T.perTable + '</p></div>' + stepper(k, q, 0, 4, a.name) + '</div>';
       });
       return h + '</div>';
     },
@@ -279,6 +318,10 @@
     return true;
   }
 
+  function validateQuiet() {
+    return !!S.date && S.guests <= remaining(S.date) && S.f.name.length >= 3 && /^[^s@]+@[^s@]+.[^s@]{2,}$/.test(S.f.email) && S.f.phone.replace(/D/g, '').length >= 7 && S.f.age && S.f.terms;
+  }
+
   function pay() {
     S.busy = true; elNext.disabled = true; elNext.textContent = T.paying; elErr.textContent = '';
     var summary = { date: longDate(S.date), guests: String(S.guests), total: money(total()) };
@@ -288,6 +331,7 @@
     }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (res.ok && res.j.url) {
+          saveDraft();
           try { sessionStorage.setItem('amb-booking', JSON.stringify(summary)); } catch (e) {}
           window.location.href = res.j.url; return;
         }
@@ -301,7 +345,7 @@
         S.busy = false; render(true);
         var addons = ['hookah', 'bottle'].filter(function (k) { return S.addons[k]; }).map(function (k) { return D.addons[k].name + ' × ' + S.addons[k]; }).join(', ') || '—';
         var text = tr(T.waMsg, { guests: S.guests, date: summary.date, name: S.f.name, addons: addons, total: summary.total });
-        fail(T.errPay, '<br><a target="_blank" rel="noopener" href="https://wa.me/' + D.whatsapp + '?text=' + encodeURIComponent(text) + '">' + esc(T.waFallback) + ' →</a>');
+        fail(T.errPay, '<br><a target="_blank" rel="noopener" href="' + esc(contactUrl(text)) + '">' + esc(D.contact.whatsapp ? T.waFallback : T.mailFallback) + ' →</a>');
       });
   }
 
@@ -328,6 +372,9 @@
   elSteps.forEach(function (li, i) { li.addEventListener('click', function () { if (i + 1 < S.step && !S.busy) { if (S.step === 3) collect(); S.step = i + 1; elErr.textContent = ''; render(); } }); });
   elBody.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.tagName === 'INPUT' && e.target.type !== 'checkbox') { e.preventDefault(); elNext.click(); } });
 
+  // the chosen evening may have sold out in the meantime: fall back to step 1 instead of reviewing a booking without a date
+  function afterAvailability() { if (!S.date && S.step > 1) { S.step = 1; fail(T.errDate); } render(true); }
+
   function openBooking(opts) {
     opts = opts || {};
     closeNav();
@@ -337,7 +384,7 @@
     render();
     if (!dlg.open) dlg.showModal();
     body.style.overflow = 'hidden';
-    if (!S.loaded) loadAvailability().then(function () { if (S.step === 1) render(true); });
+    if (!S.loaded) loadAvailability().then(afterAvailability);
   }
   dlg.addEventListener('close', function () { body.style.overflow = ''; if (location.hash === '#book') history.replaceState(null, '', location.pathname); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
@@ -347,5 +394,10 @@
     e.preventDefault();
     openBooking({ guests: t.dataset.guests, addon: t.dataset.addon });
   });
-  if (location.hash === '#book') openBooking();
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted || !S.busy) return;
+    S.busy = false; S.loaded = false;
+    if (dlg.open) { render(true); loadAvailability().then(afterAvailability); }
+  });
+  if (location.hash === '#book') { var restored = loadDraft(); openBooking(); if (restored && S.date) { S.step = 4; if (!validateQuiet()) S.step = 1; render(); } }
 })();

@@ -39,7 +39,9 @@ After any change run `npm run build` (output in `dist/`).
 
 - Evenings: Thu–Sun, max 20 guests. Bookable until 2 PM Curaçao time on the day, up to 120 days ahead.
 - Pricing: $85 pp; every 6 guests pay the $375 group price, and 5 guests are automatically rounded to the group price because it is cheaper.
-- `POST /api/create-checkout` re-validates date, seats and prices on the server, creates a Stripe Checkout session and holds the seats for 31 minutes.
+- `POST /api/create-checkout` re-validates date, seats and prices on the server, **reserves the seats atomically** (optimistic locking, so two guests can never both get the last seats), then opens a Stripe Checkout session. The hold lasts 31 minutes. Rate-limited per IP.
 - `POST /api/stripe-webhook` confirms the seats when payment succeeds and frees them when a checkout expires.
+- `GET /api/confirm-booking?session_id=…` is called by the success page: it verifies the payment with Stripe, confirms the seats (so bookings are safe even if the webhook is slow or missing) and returns the summary shown to the guest.
 - `GET /api/availability` feeds the calendar (available / few left / sold out). Bookings are stored in Netlify Blobs (store `bookings`, one record per evening) — view them with `netlify blobs:list bookings`.
-- If checkout can't be opened the guest gets a pre-filled WhatsApp message as a fallback.
+- The guest's selections survive a trip to Stripe and back (cancel link or browser Back). If checkout can't be opened the guest gets a pre-filled WhatsApp message (or email while no WhatsApp number is configured).
+- CSS/JS URLs carry a content hash (`?v=`), so a deploy is picked up immediately despite the long cache on `/assets`.

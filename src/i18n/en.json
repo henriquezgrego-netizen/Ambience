@@ -2,8 +2,8 @@
   "langName": "English",
   "locale": "en_US",
   "meta": {
-    "title": "Ambience Curaçao | Sunset Paint & Sip – Unique Things to Do in Curaçao",
-    "description": "Looking for unique things to do in Curaçao? Paint your own doormat at sunset with cocktails, island bites and a live DJ at a historic landhuis in Willemstad. Thu–Sun, from ${pp}. 18+. Book online.",
+    "title": "Ambience Curaçao | Sunset Paint & Sip · Things to Do in Curaçao",
+    "description": "Unique things to do in Curaçao: paint your own doormat at sunset with cocktails, bites & a live DJ at a Willemstad landhuis. Thu–Sun, from ${pp}. 18+.",
     "keywords": "things to do in Curaçao, best things to do in Curaçao, unique things to do in Curaçao, Curaçao activities, paint and sip Curaçao, Curaçao nightlife, Curaçao excursions, Willemstad activities, Curaçao cruise excursion, Curaçao souvenir, sunset experience Curaçao, hookah Curaçao, private events Curaçao, bachelorette Curaçao, date night Curaçao",
     "ogTitle": "Paint. Sip. Feel the Ambience. — Curaçao’s sunset experience",
     "successTitle": "Booking confirmed | Ambience Curaçao",
@@ -18,9 +18,13 @@
     "book": "Book Your Evening",
     "menu": "Menu",
     "close": "Close",
-    "language": "Language"
+    "language": "Language",
+    "skip": "Skip to content"
   },
-  "intro": { "tag": "Curaçao", "skip": "Skip intro" },
+  "intro": {
+    "tag": "Curaçao",
+    "skip": "Skip intro"
+  },
   "hero": {
     "eyebrow": "Curaçao · Sunset Paint & Sip Experience",
     "l1": "Paint.",
@@ -98,7 +102,14 @@
     "groupD": "Six seats together at the long table — perfect for friends, family and bachelorettes.",
     "groupPer": "for {groupSize} guests",
     "groupSave": "Save ${save} vs. single tickets",
-    "inc": ["Coir doormat (40 × 60 cm) to take home", "All paints, stencils & brushes", "Step-by-step guidance from your host", "Welcome drink on arrival", "Live DJ & MC all evening", "Reserved seat at the landhuis, 5:00 – 8:30 PM"],
+    "inc": [
+      "Coir doormat (40 × 60 cm) to take home",
+      "All paints, stencils & brushes",
+      "Step-by-step guidance from your host",
+      "Welcome drink on arrival",
+      "Live DJ & MC all evening",
+      "Reserved seat at the landhuis, 5:00 – 8:30 PM"
+    ],
     "book": "Book now",
     "bookGroup": "Book for {groupSize}",
     "upT": "Table upgrades",
@@ -117,7 +128,12 @@
     "eyebrow": "Private events",
     "title": "Your location. Our Ambience.",
     "p": "Villa, boat deck, beach house or boardroom — we bring the tables, doormats, paint, hosts and music to you. Birthdays, bachelorettes, team-building, wedding weekends and brand events, anywhere on Curaçao.",
-    "li": ["From 8 to 60 guests", "At your villa, resort or venue — or a private night at the landhuis", "Custom stencils with your names, logo or date", "Optional bar, bites, hookah and DJ / MC"],
+    "li": [
+      "From 8 to 60 guests",
+      "At your villa, resort or venue — or a private night at the landhuis",
+      "Custom stencils with your names, logo or date",
+      "Optional bar, bites, hookah and DJ / MC"
+    ],
     "formT": "Request a private event",
     "name": "Your name",
     "email": "Email",
@@ -129,7 +145,7 @@
     "send": "Request a proposal",
     "sending": "Sending…",
     "ok": "Thank you — your request is in. We’ll reply within 24 hours.",
-    "err": "That didn’t go through. Please try again or message us on WhatsApp.",
+    "err": "That didn’t go through. Please try again or contact us directly.",
     "alt": "Candle-lit private dinner table set outdoors"
   },
   "gal": {
@@ -159,16 +175,46 @@
     "eyebrow": "Good to know",
     "title": "Questions, answered",
     "items": [
-      { "q": "What is Ambience Curaçao?", "a": "Ambience is a sunset paint & sip experience in Willemstad, Curaçao. In three hours you design and paint your own coir doormat while enjoying drinks, island bites and a live DJ at a historic landhuis in Saliña. It runs Thursday to Sunday from 5:30 to 8:30 PM, with check-in at 5:00 PM." },
-      { "q": "How much does it cost?", "a": "Tickets are ${pp} per person. A group of {groupSize} pays ${group} in total. Your ticket includes the doormat, all materials, guidance, a welcome drink and the DJ / MC entertainment. Table upgrades with hookah, bites and a bottle are optional." },
-      { "q": "Do I need to be good at painting?", "a": "Not at all. We work with stencils and a simple dabbing technique, and your host guides every step. Most guests have never painted before — and every doormat goes home looking great." },
-      { "q": "Is there an age limit?", "a": "Yes. Ambience is an adults-only evening with alcohol and hookah service, so all guests must be {age} or older. Please bring a valid ID." },
-      { "q": "Can I take my doormat on the plane?", "a": "Yes. The doormat measures 40 × 60 cm, fits flat in a standard suitcase and weighs about 1.5 kg. The paint is dry by the end of the night and we wrap it for travel." },
-      { "q": "I’m visiting by cruise ship. Can I join?", "a": "If your ship stays in port for the evening — yes. The landhuis is about ten minutes by taxi from the Mega Pier and Mathey Wharf. Please check your all-aboard time before booking; the experience ends at 8:30 PM." },
-      { "q": "How many people can join per evening?", "a": "We keep it intimate: a maximum of {cap} guests per evening. Popular dates sell out, so we recommend booking before you fly." },
-      { "q": "What happens if it rains?", "a": "Curaçao is sunny most of the year and showers pass quickly. The landhuis has covered terraces, so the evening goes ahead. If we ever have to cancel, you choose between a new date and a full refund." },
-      { "q": "Can I cancel or change my booking?", "a": "You can reschedule or cancel free of charge up to 48 hours before your evening. Within 48 hours bookings are non-refundable, but you’re welcome to give your seat to someone else." },
-      { "q": "What should I wear?", "a": "Island chic. We provide aprons, but acrylic paint is permanent — maybe leave the white linen for another night." }
+      {
+        "q": "What is Ambience Curaçao?",
+        "a": "Ambience is a sunset paint & sip experience in Willemstad, Curaçao. In three hours you design and paint your own coir doormat while enjoying drinks, island bites and a live DJ at a historic landhuis in Saliña. It runs Thursday to Sunday from 5:30 to 8:30 PM, with check-in at 5:00 PM."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "Tickets are ${pp} per person. A group of {groupSize} pays ${group} in total. Your ticket includes the doormat, all materials, guidance, a welcome drink and the DJ / MC entertainment. Table upgrades with hookah, bites and a bottle are optional."
+      },
+      {
+        "q": "Do I need to be good at painting?",
+        "a": "Not at all. We work with stencils and a simple dabbing technique, and your host guides every step. Most guests have never painted before — and every doormat goes home looking great."
+      },
+      {
+        "q": "Is there an age limit?",
+        "a": "Yes. Ambience is an adults-only evening with alcohol and hookah service, so all guests must be {age} or older. Please bring a valid ID."
+      },
+      {
+        "q": "Can I take my doormat on the plane?",
+        "a": "Yes. The doormat measures 40 × 60 cm, fits flat in a standard suitcase and weighs about 1.5 kg. The paint is dry by the end of the night and we wrap it for travel."
+      },
+      {
+        "q": "I’m visiting by cruise ship. Can I join?",
+        "a": "If your ship stays in port for the evening — yes. The landhuis is about ten minutes by taxi from the Mega Pier and Mathey Wharf. Please check your all-aboard time before booking; the experience ends at 8:30 PM."
+      },
+      {
+        "q": "How many people can join per evening?",
+        "a": "We keep it intimate: a maximum of {cap} guests per evening. Popular dates sell out, so we recommend booking before you fly."
+      },
+      {
+        "q": "What happens if it rains?",
+        "a": "Curaçao is sunny most of the year and showers pass quickly. The landhuis has covered terraces, so the evening goes ahead. If we ever have to cancel, you choose between a new date and a full refund."
+      },
+      {
+        "q": "Can I cancel or change my booking?",
+        "a": "You can reschedule or cancel free of charge up to 48 hours before your evening. Within 48 hours bookings are non-refundable, but you’re welcome to give your seat to someone else."
+      },
+      {
+        "q": "What should I wear?",
+        "a": "Island chic. We provide aprons, but acrylic paint is permanent — maybe leave the white linen for another night."
+      }
     ]
   },
   "cta": {
@@ -187,10 +233,18 @@
     "rights": "All rights reserved.",
     "wa": "WhatsApp us"
   },
-  "sticky": { "from": "From ${pp} pp", "book": "Book now" },
+  "sticky": {
+    "from": "From ${pp} pp",
+    "book": "Book now"
+  },
   "bk": {
     "title": "Book your evening",
-    "steps": ["Date & guests", "Upgrades", "Your details", "Review & pay"],
+    "steps": [
+      "Date & guests",
+      "Upgrades",
+      "Your details",
+      "Review & pay"
+    ],
     "pickDate": "Choose your evening",
     "legendOpen": "Available",
     "legendFew": "Few seats left",
@@ -234,11 +288,12 @@
     "errPhone": "Please enter a phone number we can reach you on.",
     "errAge": "Please confirm that all guests are {age}+.",
     "errTerms": "Please accept the booking conditions.",
-    "errPay": "We couldn’t open the checkout. Please try again — or send us your booking on WhatsApp and we’ll confirm it personally.",
+    "errPay": "We couldn’t open the checkout. Please try again — or send us your booking directly and we’ll confirm it personally.",
     "waFallback": "Send booking via WhatsApp",
     "waMsg": "Hi Ambience! I’d like to book {guests} guest(s) for {date}. Name: {name}. Upgrades: {addons}. Total: {total}.",
     "summary": "Your evening",
-    "demo": "Preview mode — no payment is taken."
+    "demo": "Preview mode — no payment is taken.",
+    "mailFallback": "Send booking by email"
   },
   "ok": {
     "title": "You’re on the list.",
@@ -246,10 +301,28 @@
     "when": "Your evening",
     "guests": "Guests",
     "paid": "Paid",
-    "tips": ["Arrive at 5:00 PM for check-in and your welcome drink", "Bring a valid ID — the evening is {age}+", "Wear something you don’t mind getting a drop of paint on"],
+    "tips": [
+      "Arrive at 5:00 PM for check-in and your welcome drink",
+      "Bring a valid ID — the evening is {age}+",
+      "Wear something you don’t mind getting a drop of paint on"
+    ],
     "home": "Back to home",
-    "cal": "Questions? WhatsApp us"
+    "cal": "Questions? WhatsApp us",
+    "unverifiedTitle": "We couldn’t verify this payment.",
+    "unverified": "If you just paid, your confirmation email is on its way and your seats are safe. If you didn’t complete the payment, no money was taken — you can simply book again."
   },
-  "nf": { "title": "This page drifted off at sunset.", "p": "The page you’re looking for doesn’t exist.", "home": "Back to home" },
-  "days": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  "nf": {
+    "title": "This page drifted off at sunset.",
+    "p": "The page you’re looking for doesn’t exist.",
+    "home": "Back to home"
+  },
+  "days": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+  ]
 }

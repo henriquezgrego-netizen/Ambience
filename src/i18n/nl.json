@@ -2,8 +2,8 @@
   "langName": "Nederlands",
   "locale": "nl_NL",
   "meta": {
-    "title": "Ambience Curaçao | Paint & Sip bij zonsondergang – Wat te doen op Curaçao",
-    "description": "Wat te doen op Curaçao? Schilder je eigen deurmat bij zonsondergang, met cocktails, lokale hapjes en een live DJ in een historisch landhuis in Willemstad. Do–zo, vanaf ${pp}. 18+. Boek online.",
+    "title": "Ambience Curaçao | Paint & Sip bij zonsondergang · Wat te doen op Curaçao",
+    "description": "Wat te doen op Curaçao? Schilder je eigen deurmat bij zonsondergang met cocktails, hapjes & live DJ in een landhuis in Willemstad. Do–zo, vanaf ${pp}. 18+.",
     "keywords": "wat te doen op Curaçao, activiteiten Curaçao, leuke uitjes Curaçao, excursies Curaçao, paint and sip Curaçao, workshop Curaçao, uitgaan Curaçao, Curaçao tips, vrijgezellenfeest Curaçao, groepsuitje Curaçao, souvenir Curaçao, zonsondergang Curaçao, shisha Curaçao, bedrijfsuitje Curaçao, Willemstad activiteiten",
     "ogTitle": "Paint. Sip. Feel the Ambience. — dé sunset-ervaring van Curaçao",
     "successTitle": "Boeking bevestigd | Ambience Curaçao",
@@ -18,9 +18,13 @@
     "book": "Boek je avond",
     "menu": "Menu",
     "close": "Sluiten",
-    "language": "Taal"
+    "language": "Taal",
+    "skip": "Naar de inhoud"
   },
-  "intro": { "tag": "Curaçao", "skip": "Intro overslaan" },
+  "intro": {
+    "tag": "Curaçao",
+    "skip": "Intro overslaan"
+  },
   "hero": {
     "eyebrow": "Curaçao · Paint & Sip bij zonsondergang",
     "l1": "Paint.",
@@ -98,7 +102,14 @@
     "groupD": "Zes plaatsen naast elkaar aan de lange tafel — ideaal voor vrienden, familie en vrijgezellenfeesten.",
     "groupPer": "voor {groupSize} gasten",
     "groupSave": "Bespaar ${save} t.o.v. losse tickets",
-    "inc": ["Kokosdeurmat (40 × 60 cm) om mee te nemen", "Alle verf, sjablonen & kwasten", "Stap-voor-stap begeleiding door je host", "Welkomstdrankje bij aankomst", "Live DJ & MC de hele avond", "Gereserveerde plek in het landhuis, 17:00 – 20:30 uur"],
+    "inc": [
+      "Kokosdeurmat (40 × 60 cm) om mee te nemen",
+      "Alle verf, sjablonen & kwasten",
+      "Stap-voor-stap begeleiding door je host",
+      "Welkomstdrankje bij aankomst",
+      "Live DJ & MC de hele avond",
+      "Gereserveerde plek in het landhuis, 17:00 – 20:30 uur"
+    ],
     "book": "Boek nu",
     "bookGroup": "Boek voor {groupSize}",
     "upT": "Tafelupgrades",
@@ -117,7 +128,12 @@
     "eyebrow": "Privé-events",
     "title": "Jouw locatie. Onze Ambience.",
     "p": "Villa, bootdek, strandhuis of boardroom — wij komen met tafels, deurmatten, verf, hosts en muziek naar jou toe. Verjaardagen, vrijgezellenfeesten, teambuilding, bruiloftsweekenden en merkevents, overal op Curaçao.",
-    "li": ["Van 8 tot 60 gasten", "In je villa, resort of venue — of een privéavond in het landhuis", "Sjablonen op maat met jullie namen, logo of datum", "Optioneel: bar, hapjes, shisha en DJ / MC"],
+    "li": [
+      "Van 8 tot 60 gasten",
+      "In je villa, resort of venue — of een privéavond in het landhuis",
+      "Sjablonen op maat met jullie namen, logo of datum",
+      "Optioneel: bar, hapjes, shisha en DJ / MC"
+    ],
     "formT": "Vraag een privé-event aan",
     "name": "Je naam",
     "email": "E-mail",
@@ -129,7 +145,7 @@
     "send": "Vraag een voorstel aan",
     "sending": "Versturen…",
     "ok": "Dank je — je aanvraag is binnen. Je hoort binnen 24 uur van ons.",
-    "err": "Dat ging niet goed. Probeer het opnieuw of stuur ons een WhatsApp.",
+    "err": "Dat ging niet goed. Probeer het opnieuw of neem rechtstreeks contact met ons op.",
     "alt": "Privédiner bij kaarslicht aan een buitentafel"
   },
   "gal": {
@@ -159,16 +175,46 @@
     "eyebrow": "Goed om te weten",
     "title": "Veelgestelde vragen",
     "items": [
-      { "q": "Wat is Ambience Curaçao?", "a": "Ambience is een paint-&-sip-ervaring bij zonsondergang in Willemstad, Curaçao. In drie uur ontwerp en schilder je je eigen kokosdeurmat, met drankjes, lokale hapjes en een live DJ in een historisch landhuis in Saliña. Elke donderdag t/m zondag van 17:30 tot 20:30 uur, inchecken vanaf 17:00 uur." },
-      { "q": "Wat kost het?", "a": "Tickets kosten ${pp} per persoon. Een groep van {groupSize} betaalt in totaal ${group}. Inbegrepen: de deurmat, alle materialen, begeleiding, een welkomstdrankje en DJ / MC entertainment. Tafelupgrades met shisha, hapjes en een fles zijn optioneel." },
-      { "q": "Moet ik goed kunnen schilderen?", "a": "Helemaal niet. We werken met sjablonen en een eenvoudige deptechniek, en je host begeleidt elke stap. De meeste gasten hebben nog nooit geschilderd — en elke deurmat gaat prachtig mee naar huis." },
-      { "q": "Is er een leeftijdsgrens?", "a": "Ja. Ambience is een avond voor volwassenen met alcohol en shisha, dus alle gasten moeten {age} jaar of ouder zijn. Neem een geldig legitimatiebewijs mee." },
-      { "q": "Kan mijn deurmat mee in het vliegtuig?", "a": "Ja. De deurmat is 40 × 60 cm, past plat in een standaardkoffer en weegt ongeveer 1,5 kg. De verf is aan het eind van de avond droog en we pakken hem reisklaar in." },
-      { "q": "Ik kom met een cruiseschip. Kan ik meedoen?", "a": "Als je schip ’s avonds in de haven blijft: ja. Het landhuis ligt op zo’n tien minuten met de taxi van de Mega Pier en de Mathey Werf. Check vóór het boeken je all-aboard-tijd; de ervaring eindigt om 20:30 uur." },
-      { "q": "Hoeveel mensen kunnen er per avond meedoen?", "a": "We houden het intiem: maximaal {cap} gasten per avond. Populaire data raken uitverkocht, dus boek bij voorkeur vóór vertrek." },
-      { "q": "Wat als het regent?", "a": "Curaçao is vrijwel het hele jaar zonnig en buien trekken snel over. Het landhuis heeft overdekte terrassen, dus de avond gaat gewoon door. Moeten wij toch annuleren, dan kies je zelf: een nieuwe datum of je geld terug." },
-      { "q": "Kan ik mijn boeking annuleren of wijzigen?", "a": "Tot 48 uur voor je avond kun je kosteloos omboeken of annuleren. Binnen 48 uur is restitutie niet meer mogelijk, maar je mag je plek wel aan iemand anders geven." },
-      { "q": "Wat trek ik aan?", "a": "Island chic. Je krijgt een schort van ons, maar acrylverf is permanent — bewaar dat witte linnen dus voor een andere avond." }
+      {
+        "q": "Wat is Ambience Curaçao?",
+        "a": "Ambience is een paint-&-sip-ervaring bij zonsondergang in Willemstad, Curaçao. In drie uur ontwerp en schilder je je eigen kokosdeurmat, met drankjes, lokale hapjes en een live DJ in een historisch landhuis in Saliña. Elke donderdag t/m zondag van 17:30 tot 20:30 uur, inchecken vanaf 17:00 uur."
+      },
+      {
+        "q": "Wat kost het?",
+        "a": "Tickets kosten ${pp} per persoon. Een groep van {groupSize} betaalt in totaal ${group}. Inbegrepen: de deurmat, alle materialen, begeleiding, een welkomstdrankje en DJ / MC entertainment. Tafelupgrades met shisha, hapjes en een fles zijn optioneel."
+      },
+      {
+        "q": "Moet ik goed kunnen schilderen?",
+        "a": "Helemaal niet. We werken met sjablonen en een eenvoudige deptechniek, en je host begeleidt elke stap. De meeste gasten hebben nog nooit geschilderd — en elke deurmat gaat prachtig mee naar huis."
+      },
+      {
+        "q": "Is er een leeftijdsgrens?",
+        "a": "Ja. Ambience is een avond voor volwassenen met alcohol en shisha, dus alle gasten moeten {age} jaar of ouder zijn. Neem een geldig legitimatiebewijs mee."
+      },
+      {
+        "q": "Kan mijn deurmat mee in het vliegtuig?",
+        "a": "Ja. De deurmat is 40 × 60 cm, past plat in een standaardkoffer en weegt ongeveer 1,5 kg. De verf is aan het eind van de avond droog en we pakken hem reisklaar in."
+      },
+      {
+        "q": "Ik kom met een cruiseschip. Kan ik meedoen?",
+        "a": "Als je schip ’s avonds in de haven blijft: ja. Het landhuis ligt op zo’n tien minuten met de taxi van de Mega Pier en de Mathey Werf. Check vóór het boeken je all-aboard-tijd; de ervaring eindigt om 20:30 uur."
+      },
+      {
+        "q": "Hoeveel mensen kunnen er per avond meedoen?",
+        "a": "We houden het intiem: maximaal {cap} gasten per avond. Populaire data raken uitverkocht, dus boek bij voorkeur vóór vertrek."
+      },
+      {
+        "q": "Wat als het regent?",
+        "a": "Curaçao is vrijwel het hele jaar zonnig en buien trekken snel over. Het landhuis heeft overdekte terrassen, dus de avond gaat gewoon door. Moeten wij toch annuleren, dan kies je zelf: een nieuwe datum of je geld terug."
+      },
+      {
+        "q": "Kan ik mijn boeking annuleren of wijzigen?",
+        "a": "Tot 48 uur voor je avond kun je kosteloos omboeken of annuleren. Binnen 48 uur is restitutie niet meer mogelijk, maar je mag je plek wel aan iemand anders geven."
+      },
+      {
+        "q": "Wat trek ik aan?",
+        "a": "Island chic. Je krijgt een schort van ons, maar acrylverf is permanent — bewaar dat witte linnen dus voor een andere avond."
+      }
     ]
   },
   "cta": {
@@ -187,10 +233,18 @@
     "rights": "Alle rechten voorbehouden.",
     "wa": "Stuur een WhatsApp"
   },
-  "sticky": { "from": "Vanaf ${pp} p.p.", "book": "Boek nu" },
+  "sticky": {
+    "from": "Vanaf ${pp} p.p.",
+    "book": "Boek nu"
+  },
   "bk": {
     "title": "Boek je avond",
-    "steps": ["Datum & gasten", "Upgrades", "Je gegevens", "Controleren & betalen"],
+    "steps": [
+      "Datum & gasten",
+      "Upgrades",
+      "Je gegevens",
+      "Controleren & betalen"
+    ],
     "pickDate": "Kies je avond",
     "legendOpen": "Beschikbaar",
     "legendFew": "Bijna vol",
@@ -234,11 +288,12 @@
     "errPhone": "Vul een telefoonnummer in waarop we je kunnen bereiken.",
     "errAge": "Bevestig dat alle gasten {age}+ zijn.",
     "errTerms": "Ga akkoord met de boekingsvoorwaarden.",
-    "errPay": "De checkout kon niet worden geopend. Probeer het opnieuw — of stuur je boeking via WhatsApp, dan bevestigen we persoonlijk.",
+    "errPay": "De checkout kon niet worden geopend. Probeer het opnieuw — of stuur ons je boeking rechtstreeks, dan bevestigen we persoonlijk.",
     "waFallback": "Boeking via WhatsApp sturen",
     "waMsg": "Hoi Ambience! Ik wil graag boeken voor {guests} gast(en) op {date}. Naam: {name}. Upgrades: {addons}. Totaal: {total}.",
     "summary": "Jouw avond",
-    "demo": "Voorbeeldmodus — er wordt niets afgeschreven."
+    "demo": "Voorbeeldmodus — er wordt niets afgeschreven.",
+    "mailFallback": "Boeking per e-mail sturen"
   },
   "ok": {
     "title": "Je staat op de lijst.",
@@ -246,10 +301,28 @@
     "when": "Jouw avond",
     "guests": "Gasten",
     "paid": "Betaald",
-    "tips": ["Kom om 17:00 uur voor het inchecken en je welkomstdrankje", "Neem een geldig legitimatiebewijs mee — de avond is {age}+", "Draag iets waar een druppel verf op mag komen"],
+    "tips": [
+      "Kom om 17:00 uur voor het inchecken en je welkomstdrankje",
+      "Neem een geldig legitimatiebewijs mee — de avond is {age}+",
+      "Draag iets waar een druppel verf op mag komen"
+    ],
     "home": "Terug naar home",
-    "cal": "Vragen? Stuur een WhatsApp"
+    "cal": "Vragen? Stuur een WhatsApp",
+    "unverifiedTitle": "We konden deze betaling niet verifiëren.",
+    "unverified": "Heb je net betaald? Dan is je bevestigingsmail onderweg en zijn je plaatsen veilig. Heb je de betaling niet afgerond, dan is er niets afgeschreven — je kunt gewoon opnieuw boeken."
   },
-  "nf": { "title": "Deze pagina is met de zon ondergegaan.", "p": "De pagina die je zoekt bestaat niet.", "home": "Terug naar home" },
-  "days": ["zo", "ma", "di", "wo", "do", "vr", "za"]
+  "nf": {
+    "title": "Deze pagina is met de zon ondergegaan.",
+    "p": "De pagina die je zoekt bestaat niet.",
+    "home": "Terug naar home"
+  },
+  "days": [
+    "zo",
+    "ma",
+    "di",
+    "wo",
+    "do",
+    "vr",
+    "za"
+  ]
 }

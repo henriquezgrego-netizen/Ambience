@@ -440,7 +440,7 @@ dialog.bk[open] { animation: bkIn .6s var(--ease); }
 .review .tot dd { font: 500 1.6rem/1 var(--serif); color: var(--gold-hi); }
 
 /* ---------- responsive ---------- */
-@media (max-width: 1080px) {
+@media (max-width: 1180px) {
   .nav { position: fixed; inset: 0; background: rgba(8, 6, 4, .97); backdrop-filter: blur(20px); flex-direction: column; justify-content: center; gap: 26px; opacity: 0; visibility: hidden; transition: opacity .45s, visibility .45s; z-index: 55; }
   .nav.open { opacity: 1; visibility: visible; }
   .nav > a:not(.btn) { font: 500 2rem/1.1 var(--serif); letter-spacing: 0; text-transform: none; opacity: 1; }
@@ -462,7 +462,8 @@ dialog.bk[open] { animation: bkIn .6s var(--ease); }
   .hero-media::after { background: linear-gradient(0deg, var(--bg) 2%, rgba(6, 4, 2, .5) 40%, rgba(6, 4, 2, .62) 100%); }
   .sticky-book { position: fixed; inset: auto 0 0 0; z-index: 45; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px calc(12px + env(safe-area-inset-bottom)); background: rgba(10, 8, 6, .94); backdrop-filter: blur(14px); border-top: 1px solid var(--line-strong); font-size: .76rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-hi); transform: translateY(110%); transition: transform .6s var(--ease); }
   .sticky-book.show { transform: none; }
-  .wa-float { bottom: 84px; right: 16px; }
+  .wa-float { right: 16px; transition: transform .4s var(--ease), background .3s, color .3s, bottom .6s var(--ease); }
+  .sticky-book.show ~ .wa-float { bottom: 84px; }
   dialog.bk { width: 100vw; height: 100vh; height: 100dvh; border: 0; }
   .bk-main { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
   .bk-sum { border-left: 0; border-top: 1px solid var(--line); padding: 12px 20px; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; overflow: visible; }

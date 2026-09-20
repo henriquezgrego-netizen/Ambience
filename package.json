@@ -10,7 +10,7 @@
     "assets": "node tools/make-assets.mjs"
   },
   "dependencies": {
-    "@netlify/blobs": "^8.1.0"
+    "@netlify/blobs": "^11.1.0"
   },
   "devDependencies": {
     "sharp": "^0.33.5"

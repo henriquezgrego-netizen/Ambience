@@ -20,13 +20,14 @@ for (let i = 0, o = 0; i < data.length; i += C, o += 4) {
   rgba[o] = un(r); rgba[o + 1] = un(g); rgba[o + 2] = un(b); rgba[o + 3] = Math.round(a * 255);
 }
 const full = sharp(rgba, { raw: { width: W, height: H, channels: 4 } });
-await full.clone().png({ compressionLevel: 9 }).toFile(`${OUT}/logo-full.png`);
+const PNG = { compressionLevel: 9, palette: true, quality: 92, effort: 10 };
+await full.clone().png(PNG).toFile(`${OUT}/logo-full.png`);
 
 // 2. crops used by the intro animation + header
 const crop = (left, top, width, height) => full.clone().extract({ left, top, width, height });
-await crop(440, 0, 720, 580).resize({ width: 720 }).png().toFile(`${OUT}/logo-emblem.png`);
-await crop(0, 630, W, 190).png().toFile(`${OUT}/logo-wordmark.png`);
-await crop(0, 0, W, 830).resize({ width: 900 }).png().toFile(`${OUT}/logo-stacked.png`);
+await crop(440, 0, 720, 580).resize({ width: 560 }).png(PNG).toFile(`${OUT}/logo-emblem.png`);
+await crop(0, 630, W, 190).resize({ width: 900 }).png(PNG).toFile(`${OUT}/logo-wordmark.png`);
+await crop(0, 0, W, 830).resize({ width: 640 }).png(PNG).toFile(`${OUT}/logo-stacked.png`);
 
 // 3. favicons: emblem on a black rounded tile
 const tile = async (size, radius = 0.22) => {

@@ -2,8 +2,8 @@
   "langName": "Español",
   "locale": "es_ES",
   "meta": {
-    "title": "Ambience Curaçao | Paint & Sip al atardecer – Qué hacer en Curazao",
-    "description": "¿Qué hacer en Curazao? Pinta tu propio felpudo al atardecer con cócteles, bocados isleños y DJ en vivo en un landhuis histórico de Willemstad. De jueves a domingo, desde ${pp}. Solo +18. Reserva online.",
+    "title": "Ambience Curaçao | Paint & Sip al atardecer · Qué hacer en Curazao",
+    "description": "¿Qué hacer en Curazao? Pinta tu propio felpudo al atardecer con cócteles, bocados y DJ en vivo en un landhuis de Willemstad. Jue–dom, desde ${pp}. +18.",
     "keywords": "qué hacer en Curazao, que hacer en Curaçao, actividades en Curazao, planes en Curazao, tours en Curazao, excursiones en Curazao, paint and sip Curazao, vida nocturna Curazao, qué hacer en Willemstad, atardecer en Curazao, recuerdos de Curazao, despedida de soltera Curazao, eventos privados Curazao, hookah Curazao, turismo Curazao",
     "ogTitle": "Paint. Sip. Feel the Ambience. — la experiencia al atardecer de Curazao",
     "successTitle": "Reserva confirmada | Ambience Curaçao",
@@ -18,9 +18,13 @@
     "book": "Reserva tu velada",
     "menu": "Menú",
     "close": "Cerrar",
-    "language": "Idioma"
+    "language": "Idioma",
+    "skip": "Ir al contenido"
   },
-  "intro": { "tag": "Curaçao", "skip": "Saltar intro" },
+  "intro": {
+    "tag": "Curaçao",
+    "skip": "Saltar intro"
+  },
   "hero": {
     "eyebrow": "Curazao · Experiencia Paint & Sip al atardecer",
     "l1": "Paint.",
@@ -98,7 +102,14 @@
     "groupD": "Seis asientos juntos en la mesa larga — ideal para amigos, familia y despedidas de soltera.",
     "groupPer": "para {groupSize} invitados",
     "groupSave": "Ahorra ${save} frente a entradas individuales",
-    "inc": ["Felpudo de fibra de coco (40 × 60 cm) para llevar", "Todas las pinturas, plantillas y pinceles", "Guía paso a paso de tu anfitrión", "Trago de bienvenida al llegar", "DJ y MC en vivo toda la velada", "Asiento reservado en el landhuis, 5:00 – 8:30 PM"],
+    "inc": [
+      "Felpudo de fibra de coco (40 × 60 cm) para llevar",
+      "Todas las pinturas, plantillas y pinceles",
+      "Guía paso a paso de tu anfitrión",
+      "Trago de bienvenida al llegar",
+      "DJ y MC en vivo toda la velada",
+      "Asiento reservado en el landhuis, 5:00 – 8:30 PM"
+    ],
     "book": "Reservar",
     "bookGroup": "Reservar para {groupSize}",
     "upT": "Mejoras de mesa",
@@ -117,7 +128,12 @@
     "eyebrow": "Eventos privados",
     "title": "Tu lugar. Nuestro Ambience.",
     "p": "Villa, cubierta de barco, casa de playa o sala de juntas — llevamos mesas, felpudos, pintura, anfitriones y música hasta ti. Cumpleaños, despedidas de soltera, team building, fines de semana de boda y eventos de marca, en cualquier lugar de Curazao.",
-    "li": ["De 8 a 60 invitados", "En tu villa, resort o local — o una noche privada en el landhuis", "Plantillas personalizadas con sus nombres, logo o fecha", "Opcional: bar, bocados, hookah y DJ / MC"],
+    "li": [
+      "De 8 a 60 invitados",
+      "En tu villa, resort o local — o una noche privada en el landhuis",
+      "Plantillas personalizadas con sus nombres, logo o fecha",
+      "Opcional: bar, bocados, hookah y DJ / MC"
+    ],
     "formT": "Solicita un evento privado",
     "name": "Tu nombre",
     "email": "Correo electrónico",
@@ -129,7 +145,7 @@
     "send": "Solicitar propuesta",
     "sending": "Enviando…",
     "ok": "Gracias — recibimos tu solicitud. Te responderemos en menos de 24 horas.",
-    "err": "No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.",
+    "err": "No se pudo enviar. Inténtalo de nuevo o contáctanos directamente.",
     "alt": "Cena privada a la luz de las velas en una mesa al aire libre"
   },
   "gal": {
@@ -159,16 +175,46 @@
     "eyebrow": "Bueno saberlo",
     "title": "Preguntas frecuentes",
     "items": [
-      { "q": "¿Qué es Ambience Curaçao?", "a": "Ambience es una experiencia de paint & sip al atardecer en Willemstad, Curazao. En tres horas diseñas y pintas tu propio felpudo de fibra de coco mientras disfrutas de tragos, bocados isleños y DJ en vivo en un landhuis histórico de Saliña. De jueves a domingo de 5:30 a 8:30 PM, con check-in a las 5:00 PM." },
-      { "q": "¿Cuánto cuesta?", "a": "La entrada cuesta ${pp} por persona. Un grupo de {groupSize} paga ${group} en total. Incluye el felpudo, todos los materiales, la guía, un trago de bienvenida y el entretenimiento de DJ / MC. Las mejoras de mesa con hookah, bocados y botella son opcionales." },
-      { "q": "¿Tengo que saber pintar?", "a": "Para nada. Trabajamos con plantillas y una técnica sencilla de toques, y tu anfitrión te guía en cada paso. La mayoría de nuestros invitados nunca ha pintado — y todos los felpudos se van a casa viéndose geniales." },
-      { "q": "¿Hay límite de edad?", "a": "Sí. Ambience es una velada solo para adultos con servicio de alcohol y hookah, por lo que todos los invitados deben tener {age} años o más. Trae un documento de identidad válido." },
-      { "q": "¿Puedo llevar mi felpudo en el avión?", "a": "Sí. El felpudo mide 40 × 60 cm, cabe plano en una maleta estándar y pesa alrededor de 1,5 kg. La pintura está seca al final de la noche y te lo envolvemos para el viaje." },
-      { "q": "Llego en crucero. ¿Puedo participar?", "a": "Si tu barco permanece en puerto por la noche, sí. El landhuis está a unos diez minutos en taxi del Mega Pier y del Mathey Wharf. Revisa tu hora de embarque antes de reservar; la experiencia termina a las 8:30 PM." },
-      { "q": "¿Cuántas personas participan por velada?", "a": "Lo mantenemos íntimo: máximo {cap} invitados por velada. Las fechas populares se agotan, así que te recomendamos reservar antes de viajar." },
-      { "q": "¿Qué pasa si llueve?", "a": "Curazao es soleado casi todo el año y los aguaceros pasan rápido. El landhuis tiene terrazas techadas, así que la velada continúa. Si alguna vez tenemos que cancelar, tú eliges: nueva fecha o reembolso completo." },
-      { "q": "¿Puedo cancelar o cambiar mi reserva?", "a": "Puedes cambiar o cancelar sin costo hasta 48 horas antes de tu velada. Dentro de las 48 horas la reserva no es reembolsable, pero puedes cederle tu lugar a otra persona." },
-      { "q": "¿Qué me pongo?", "a": "Island chic. Te damos un delantal, pero la pintura acrílica es permanente — mejor deja el lino blanco para otra noche." }
+      {
+        "q": "¿Qué es Ambience Curaçao?",
+        "a": "Ambience es una experiencia de paint & sip al atardecer en Willemstad, Curazao. En tres horas diseñas y pintas tu propio felpudo de fibra de coco mientras disfrutas de tragos, bocados isleños y DJ en vivo en un landhuis histórico de Saliña. De jueves a domingo de 5:30 a 8:30 PM, con check-in a las 5:00 PM."
+      },
+      {
+        "q": "¿Cuánto cuesta?",
+        "a": "La entrada cuesta ${pp} por persona. Un grupo de {groupSize} paga ${group} en total. Incluye el felpudo, todos los materiales, la guía, un trago de bienvenida y el entretenimiento de DJ / MC. Las mejoras de mesa con hookah, bocados y botella son opcionales."
+      },
+      {
+        "q": "¿Tengo que saber pintar?",
+        "a": "Para nada. Trabajamos con plantillas y una técnica sencilla de toques, y tu anfitrión te guía en cada paso. La mayoría de nuestros invitados nunca ha pintado — y todos los felpudos se van a casa viéndose geniales."
+      },
+      {
+        "q": "¿Hay límite de edad?",
+        "a": "Sí. Ambience es una velada solo para adultos con servicio de alcohol y hookah, por lo que todos los invitados deben tener {age} años o más. Trae un documento de identidad válido."
+      },
+      {
+        "q": "¿Puedo llevar mi felpudo en el avión?",
+        "a": "Sí. El felpudo mide 40 × 60 cm, cabe plano en una maleta estándar y pesa alrededor de 1,5 kg. La pintura está seca al final de la noche y te lo envolvemos para el viaje."
+      },
+      {
+        "q": "Llego en crucero. ¿Puedo participar?",
+        "a": "Si tu barco permanece en puerto por la noche, sí. El landhuis está a unos diez minutos en taxi del Mega Pier y del Mathey Wharf. Revisa tu hora de embarque antes de reservar; la experiencia termina a las 8:30 PM."
+      },
+      {
+        "q": "¿Cuántas personas participan por velada?",
+        "a": "Lo mantenemos íntimo: máximo {cap} invitados por velada. Las fechas populares se agotan, así que te recomendamos reservar antes de viajar."
+      },
+      {
+        "q": "¿Qué pasa si llueve?",
+        "a": "Curazao es soleado casi todo el año y los aguaceros pasan rápido. El landhuis tiene terrazas techadas, así que la velada continúa. Si alguna vez tenemos que cancelar, tú eliges: nueva fecha o reembolso completo."
+      },
+      {
+        "q": "¿Puedo cancelar o cambiar mi reserva?",
+        "a": "Puedes cambiar o cancelar sin costo hasta 48 horas antes de tu velada. Dentro de las 48 horas la reserva no es reembolsable, pero puedes cederle tu lugar a otra persona."
+      },
+      {
+        "q": "¿Qué me pongo?",
+        "a": "Island chic. Te damos un delantal, pero la pintura acrílica es permanente — mejor deja el lino blanco para otra noche."
+      }
     ]
   },
   "cta": {
@@ -187,10 +233,18 @@
     "rights": "Todos los derechos reservados.",
     "wa": "Escríbenos por WhatsApp"
   },
-  "sticky": { "from": "Desde ${pp} p.p.", "book": "Reservar" },
+  "sticky": {
+    "from": "Desde ${pp} p.p.",
+    "book": "Reservar"
+  },
   "bk": {
     "title": "Reserva tu velada",
-    "steps": ["Fecha e invitados", "Mejoras", "Tus datos", "Revisar y pagar"],
+    "steps": [
+      "Fecha e invitados",
+      "Mejoras",
+      "Tus datos",
+      "Revisar y pagar"
+    ],
     "pickDate": "Elige tu velada",
     "legendOpen": "Disponible",
     "legendFew": "Últimos lugares",
@@ -234,11 +288,12 @@
     "errPhone": "Escribe un teléfono donde podamos contactarte.",
     "errAge": "Confirma que todos los invitados son +{age}.",
     "errTerms": "Acepta las condiciones de reserva.",
-    "errPay": "No pudimos abrir el pago. Inténtalo de nuevo — o envíanos tu reserva por WhatsApp y la confirmamos personalmente.",
+    "errPay": "No pudimos abrir el pago. Inténtalo de nuevo — o envíanos tu reserva directamente y la confirmamos personalmente.",
     "waFallback": "Enviar reserva por WhatsApp",
     "waMsg": "¡Hola Ambience! Quiero reservar para {guests} invitado(s) el {date}. Nombre: {name}. Mejoras: {addons}. Total: {total}.",
     "summary": "Tu velada",
-    "demo": "Modo de vista previa — no se realiza ningún cobro."
+    "demo": "Modo de vista previa — no se realiza ningún cobro.",
+    "mailFallback": "Enviar reserva por correo"
   },
   "ok": {
     "title": "Ya estás en la lista.",
@@ -246,10 +301,28 @@
     "when": "Tu velada",
     "guests": "Invitados",
     "paid": "Pagado",
-    "tips": ["Llega a las 5:00 PM para el check-in y tu trago de bienvenida", "Trae un documento válido — la velada es +{age}", "Ponte algo que pueda recibir una gota de pintura"],
+    "tips": [
+      "Llega a las 5:00 PM para el check-in y tu trago de bienvenida",
+      "Trae un documento válido — la velada es +{age}",
+      "Ponte algo que pueda recibir una gota de pintura"
+    ],
     "home": "Volver al inicio",
-    "cal": "¿Preguntas? Escríbenos por WhatsApp"
+    "cal": "¿Preguntas? Escríbenos por WhatsApp",
+    "unverifiedTitle": "No pudimos verificar este pago.",
+    "unverified": "Si acabas de pagar, tu correo de confirmación va en camino y tus lugares están seguros. Si no completaste el pago, no se hizo ningún cobro — puedes reservar de nuevo."
   },
-  "nf": { "title": "Esta página se fue con el atardecer.", "p": "La página que buscas no existe.", "home": "Volver al inicio" },
-  "days": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"]
+  "nf": {
+    "title": "Esta página se fue con el atardecer.",
+    "p": "La página que buscas no existe.",
+    "home": "Volver al inicio"
+  },
+  "days": [
+    "dom",
+    "lun",
+    "mar",
+    "mié",
+    "jue",
+    "vie",
+    "sáb"
+  ]
 }

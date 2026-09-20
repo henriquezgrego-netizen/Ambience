@@ -1,7 +1,8 @@
 // Static site generator: src/ -> dist/ (one fully translated page set per language, for SEO).
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import { renderHome, renderSuccess, render404 } from './src/page.mjs';
+import { createHash } from 'node:crypto';
+import { renderHome, renderSuccess, render404, hasWhatsapp } from './src/page.mjs';
 
 const cfg = JSON.parse(readFileSync('src/config.json', 'utf8'));
 const langs = ['en', 'nl', 'es'];
@@ -23,6 +24,8 @@ const fill = (v) =>
   : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, fill(x)]))
   : v;
 
+const v = createHash('sha1').update(readFileSync('src/styles.css')).update(readFileSync('src/app.js')).digest('hex').slice(0, 8);
+
 const out = (file, content) => { const p = join(DIST, file); mkdirSync(dirname(p), { recursive: true }); writeFileSync(p, content); };
 
 rmSync(DIST, { recursive: true, force: true });
@@ -34,7 +37,7 @@ cpSync('src/app.js', join(DIST, 'assets/app.js'));
 
 for (const lang of langs) {
   const t = fill(JSON.parse(readFileSync(`src/i18n/${lang}.json`, 'utf8')));
-  const ctx = { t, cfg, lang, langs, pathOf };
+  const ctx = { t, cfg, lang, langs, pathOf, v };
   const base = pathOf(lang).slice(1);
   out(`${base}index.html`, renderHome(ctx));
   out(`${base}booking/success/index.html`, renderSuccess(ctx));
@@ -60,7 +63,7 @@ out('site.webmanifest', JSON.stringify({
 out('_headers', `/assets/*\n  Cache-Control: public, max-age=604800\n/*\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: SAMEORIGIN\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n`);
 
 const placeholders = [];
-if (/0000000$/.test(cfg.contact.whatsapp)) placeholders.push('contact.whatsapp');
+if (!hasWhatsapp(cfg)) placeholders.push('contact.whatsapp (WhatsApp buttons stay hidden until it is real)');
 if (cfg.siteUrl.includes('netlify.app')) placeholders.push('siteUrl (switch to your own domain once it is connected)');
 console.log(`built ${langs.length} languages -> ${DIST}/`);
 if (placeholders.length) console.warn('! placeholder values still in src/config.json:', placeholders.join(', '));
