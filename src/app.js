@@ -180,6 +180,9 @@
     } catch (e) { return false; }
   };
 
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var digits = function (s) { return String(s).replace(/[^0-9]/g, ''); };
+
   var remaining = function (ymd) { return Math.max(0, D.capacity - (S.booked[ymd] || 0)); };
   var isEventDay = function (ymd) { return ymd >= minDate && ymd <= maxDate && D.schedule.weekdays.indexOf(toDate(ymd).getUTCDay()) > -1; };
   var tickets = function (n) {
@@ -211,7 +214,7 @@
     var title = new Intl.DateTimeFormat(D.lang, { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(S.month);
     var prevOk = toYmd(S.month) > minDate.slice(0, 8) + '01';
     var nextOk = toYmd(new Date(Date.UTC(y, m + 1, 1))) <= maxDate;
-    var h = '<div class="cal"><div class="cal-head"><button type="button" data-cal="-1" aria-label="Previous month"' + (prevOk ? '' : ' disabled') + '>' + ARROW + '</button><strong>' + title + '</strong><button type="button" data-cal="1" aria-label="Next month"' + (nextOk ? '' : ' disabled') + '>' + ARROW + '</button></div><div class="cal-grid">';
+    var h = '<div class="cal"><div class="cal-head"><button type="button" data-cal="-1" aria-label="' + esc(T.prevMonth) + '"' + (prevOk ? '' : ' disabled') + '>' + ARROW + '</button><strong>' + title + '</strong><button type="button" data-cal="1" aria-label="' + esc(T.nextMonth) + '"' + (nextOk ? '' : ' disabled') + '>' + ARROW + '</button></div><div class="cal-grid">';
     for (var i = 0; i < 7; i++) h += '<span class="cal-dow">' + T.days[(i + first) % 7] + '</span>';
     for (i = 0; i < lead; i++) h += '<span></span>';
     for (var d = 1; d <= days; d++) {
@@ -310,8 +313,8 @@
     if (S.step === 3) {
       collect();
       if (S.f.name.length < 3) return bad('name', T.errName);
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(S.f.email)) return bad('email', T.errEmail);
-      if (S.f.phone.replace(/\D/g, '').length < 7) return bad('phone', T.errPhone);
+      if (!EMAIL_RE.test(S.f.email)) return bad('email', T.errEmail);
+      if (digits(S.f.phone).length < 7) return bad('phone', T.errPhone);
       if (!S.f.age) return fail(T.errAge), false;
       if (!S.f.terms) return fail(T.errTerms), false;
     }
@@ -319,7 +322,7 @@
   }
 
   function validateQuiet() {
-    return !!S.date && S.guests <= remaining(S.date) && S.f.name.length >= 3 && /^[^s@]+@[^s@]+.[^s@]{2,}$/.test(S.f.email) && S.f.phone.replace(/D/g, '').length >= 7 && S.f.age && S.f.terms;
+    return !!S.date && S.guests <= remaining(S.date) && S.f.name.length >= 3 && EMAIL_RE.test(S.f.email) && digits(S.f.phone).length >= 7 && S.f.age && S.f.terms;
   }
 
   function pay() {
@@ -336,8 +339,11 @@
           window.location.href = res.j.url; return;
         }
         if (res.j && res.j.error === 'sold_out') {
-          S.booked[S.date] = D.capacity - (res.j.remaining || 0); S.busy = false; S.step = 1; render();
-          return fail(tr(T.errSeats, { n: res.j.remaining || 0 }));
+          var leftNow = res.j.remaining || 0;
+          S.booked[S.date] = D.capacity - leftNow; S.busy = false; S.step = 1;
+          if (!leftNow) S.date = null; else S.guests = Math.min(S.guests, leftNow);
+          render();
+          return fail(tr(T.errSeats, { n: leftNow }));
         }
         throw new Error('checkout');
       })
@@ -378,7 +384,7 @@
   function openBooking(opts) {
     opts = opts || {};
     closeNav();
-    if (opts.guests) S.guests = Math.min(+opts.guests, maxGuests());
+    if (opts.guests) S.guests = Math.max(1, Math.min(+opts.guests, maxGuests()));
     if (opts.addon && !S.addons[opts.addon]) S.addons[opts.addon] = 1;
     S.step = 1; elErr.textContent = '';
     render();
@@ -386,9 +392,12 @@
     body.style.overflow = 'hidden';
     if (!S.loaded) loadAvailability().then(afterAvailability);
   }
-  dlg.addEventListener('close', function () { body.style.overflow = ''; if (location.hash === '#book') history.replaceState(null, '', location.pathname); });
-  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-  $('#bkClose').addEventListener('click', function () { dlg.close(); });
+  var unlock = function () { body.style.overflow = ''; if (location.hash === '#book') history.replaceState(null, '', location.pathname); };
+  var closeBooking = function () { if (dlg.open) dlg.close(); unlock(); };
+  dlg.addEventListener('close', unlock);
+  dlg.addEventListener('cancel', unlock); // Escape key
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) closeBooking(); });
+  $('#bkClose').addEventListener('click', closeBooking);
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-book]'); if (!t) return;
     e.preventDefault();

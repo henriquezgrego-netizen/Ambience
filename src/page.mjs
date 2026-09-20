@@ -110,23 +110,23 @@ function footer({ t, cfg, lang, pathOf }) {
       <p>${t.ft.tag}</p>
     </div>
     <div>
-      <h3>${t.ft.explore}</h3>
+      <p class="ft-h">${t.ft.explore}</p>
       <a href="${pathOf(lang)}#experience">${t.nav.experience}</a>
       <a href="${pathOf(lang)}#packages">${t.nav.packages}</a>
       <a href="${pathOf(lang)}#private">${t.nav.private}</a>
       <a href="${pathOf(lang)}#faq">${t.nav.faq}</a>
     </div>
     <div>
-      <h3>${t.ft.guides}</h3>
+      <p class="ft-h">${t.ft.guides}</p>
       ${t.pages.map((p) => `<a href="${pathOf(lang)}${p.slug}/">${p.nav}</a>`).join('\n      ')}
     </div>
     <div>
-      <h3>${t.ft.visit}</h3>
+      <p class="ft-h">${t.ft.visit}</p>
       <p>${t.ft.addr}</p>
       <p>${t.ft.hours}</p>
     </div>
     <div>
-      <h3>${t.ft.contact}</h3>
+      <p class="ft-h">${t.ft.contact}</p>
       ${wa ? `<a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener">${ic.wa}<span>${c.whatsappDisplay}</span></a>` : ``}
       ${c.email ? `<a href="mailto:${c.email}">${ic.mail}<span>${c.email}</span></a>` : ``}
       <a href="${c.instagram}" target="_blank" rel="noopener">${ic.ig}<span>${c.instagramHandle || 'Instagram'}</span></a>
@@ -200,7 +200,7 @@ export function renderHome(ctx) {
 
   return `${head({ ...ctx, title: t.meta.title, description: t.meta.description, jsonld: [business, faqLd, siteLd] })}
 <body class="has-intro">
-<script>try{if(sessionStorage.getItem('amb-intro'))document.body.classList.add('intro-seen')}catch(e){}</script>
+<script>try{if(location.hash||sessionStorage.getItem('amb-intro'))document.body.classList.add('intro-seen')}catch(e){document.body.classList.add('intro-seen')}</script>
 
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-glow"></div>
@@ -343,7 +343,7 @@ ${header(ctx)}
         <p>${t.pv.p}</p>
         <ul class="ticks">${t.pv.li.map((x) => `<li>${ic.check}<span>${x}</span></li>`).join('')}</ul>
       </div>
-      <form class="pv-form reveal" name="private-event" method="POST" data-netlify="true" netlify-honeypot="company" id="pvForm">
+      <form class="pv-form reveal" name="private-event" method="POST" data-netlify="true" data-netlify-honeypot="company" id="pvForm">
         <input type="hidden" name="form-name" value="private-event">
         <input type="hidden" name="language" value="${lang}">
         <p class="hp"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
@@ -388,11 +388,11 @@ ${header(ctx)}
         <p class="eyebrow">${t.loc.eyebrow}</p>
         <h2>${t.loc.title}</h2>
         <p>${t.loc.p}</p>
-        <dl class="loc-list">
-          <div>${ic.cal}<dt>${t.loc.l1t}</dt><dd>${t.loc.l1}</dd></div>
-          <div>${ic.pin}<dt>${t.loc.l2t}</dt><dd>${t.loc.l2}</dd></div>
-          <div>${ic.door}<dt>${t.loc.l3t}</dt><dd>${t.loc.l3}</dd></div>
-        </dl>
+        <div class="loc-list">
+          <div>${ic.cal}<h3>${t.loc.l1t}</h3><p>${t.loc.l1}</p></div>
+          <div>${ic.pin}<h3>${t.loc.l2t}</h3><p>${t.loc.l2}</p></div>
+          <div>${ic.door}<h3>${t.loc.l3t}</h3><p>${t.loc.l3}</p></div>
+        </div>
         <a class="btn btn-line" href="${c.mapsUrl}" target="_blank" rel="noopener">${ic.pin}${t.loc.map}</a>
       </div>
     </div>
@@ -540,7 +540,7 @@ ${header({ ...ctx, home, urls })}
       <div class="hero-cta">${primary}</div>
     </div>
   </section>
-  <article class="wrap narrow lp-body">
+  <div class="wrap narrow lp-body">
     ${page.sections.map((s) => `<section><h2>${s.h}</h2>${s.p ? `<p>${s.p}</p>` : ''}${s.items ? `<ul class="ticks">${s.items.map((x) => `<li>${ic.check}<span>${x}</span></li>`).join('')}</ul>` : ''}</section>`).join('\n    ')}
     <section>
       <h2>${t.lp.faq}</h2>
@@ -555,7 +555,7 @@ ${header({ ...ctx, home, urls })}
       <h2>${t.lp.more}</h2>
       ${others.map((o) => `<a href="${home}${o.slug}/">${o.nav}${ic.arrow}</a>`).join('')}
     </nav>
-  </article>
+  </div>
 </main>
 ${footer(ctx)}
 <script src="/assets/app.js?v=${ctx.v}" defer></script>

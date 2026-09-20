@@ -278,8 +278,8 @@ body.intro-lock { overflow: hidden; }
 .loc-list { display: grid; gap: 1.3rem; margin: 2rem 0 2.4rem; }
 .loc-list div { display: grid; grid-template-columns: 28px 1fr; column-gap: 12px; }
 .loc-list svg { color: var(--gold); grid-row: span 2; margin-top: 3px; }
-.loc-list dt { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
-.loc-list dd { color: #d9cfba; font-size: .98rem; }
+.loc-list h3 { font: 400 .7rem/1.7 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+.loc-list p { color: #d9cfba; font-size: .98rem; margin: 0; }
 
 /* faq */
 .faq-list details { border-bottom: 1px solid var(--line); }
@@ -310,11 +310,12 @@ body.intro-lock { overflow: hidden; }
 .footer-brand img { width: 210px; }
 .footer-brand .wave { margin: 14px 0 20px; width: 210px; }
 .footer-brand p { font-size: .84rem; max-width: 28ch; }
-.site-footer h3 { font: 400 .7rem/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; }
+.ft-h { font: 400 .7rem/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; }
 .site-footer a { display: flex; align-items: center; gap: 10px; color: #d9cfba; padding: 5px 0; transition: color .3s; }
 .site-footer a:hover { color: var(--gold-hi); }
 .site-footer a svg { color: var(--gold); }
 .site-footer p { margin-bottom: .5em; }
+.site-footer p.ft-h { margin-bottom: 1.4rem; }
 .footer-base { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 30px; margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--line); font-size: .78rem; }
 .footer-base p { margin: 0; }
 

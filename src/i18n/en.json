@@ -122,7 +122,7 @@
     "bottleAlt": "Bottles and candlelight on an outdoor table at night",
     "perTable": "per table",
     "add": "Add in booking",
-    "note": "Prices in US dollars, including sales tax. Payment by card. Strictly {age}+ — please bring a valid ID."
+    "note": "Prices in US dollars, tax included. Payment by card. Strictly {age}+, so please bring a valid ID."
   },
   "pv": {
     "eyebrow": "Private events",
@@ -144,7 +144,7 @@
     "msg": "Tell us about your event",
     "send": "Request a proposal",
     "sending": "Sending…",
-    "ok": "Thank you — your request is in. We’ll reply within 24 hours.",
+    "ok": "Thank you, we’ve received your request. We’ll reply within 24 hours.",
     "err": "That didn’t go through. Please try again or contact us directly.",
     "alt": "Candle-lit private dinner table set outdoors"
   },
@@ -262,7 +262,7 @@
     "groupApplied": "Group rate applied",
     "groupNudge": "Add {n} more and pay the ${group} group rate",
     "upT": "Make it a celebration",
-    "upLead": "Optional table upgrades — each serves up to six guests.",
+    "upLead": "Optional table upgrades. One serves a table of up to six.",
     "none": "No thanks, just the experience",
     "detailsT": "Who’s coming?",
     "fName": "Full name",
@@ -293,12 +293,14 @@
     "errPhone": "Please enter a phone number we can reach you on.",
     "errAge": "Please confirm that all guests are {age}+.",
     "errTerms": "Please accept the booking conditions.",
-    "errPay": "We couldn’t open the checkout. Please try again — or send us your booking directly and we’ll confirm it personally.",
+    "errPay": "We couldn’t open the checkout. Please try again, or send us your booking directly and we’ll confirm it personally.",
     "waFallback": "Send booking via WhatsApp",
     "waMsg": "Hi Ambience! I’d like to book {guests} guest(s) for {date}. Name: {name}. Upgrades: {addons}. Total: {total}.",
     "summary": "Your evening",
-    "demo": "Preview mode — no payment is taken.",
-    "mailFallback": "Send booking by email"
+    "demo": "Preview mode: no payment is taken.",
+    "mailFallback": "Send booking by email",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month"
   },
   "ok": {
     "title": "You’re on the list.",
@@ -308,13 +310,13 @@
     "paid": "Paid",
     "tips": [
       "Arrive at 5:00 PM for check-in and your welcome drink",
-      "Bring a valid ID — the evening is {age}+",
-      "Wear something you don’t mind getting a drop of paint on"
+      "Bring a valid ID. The evening is {age}+",
+      "Wear something that can take a drop of paint"
     ],
     "home": "Back to home",
     "cal": "Questions? WhatsApp us",
     "unverifiedTitle": "We couldn’t verify this payment.",
-    "unverified": "If you just paid, your confirmation email is on its way and your seats are safe. If you didn’t complete the payment, no money was taken — you can simply book again."
+    "unverified": "If you just paid, your receipt is on its way by email and your seats are safe. If you didn’t complete the payment, no money was taken and you can simply book again."
   },
   "nf": {
     "title": "We can’t find that page.",

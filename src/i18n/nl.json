@@ -122,7 +122,7 @@
     "bottleAlt": "Flessen en kaarslicht op een buitentafel in de avond",
     "perTable": "per tafel",
     "add": "Toevoegen bij het boeken",
-    "note": "Prijzen in Amerikaanse dollars, inclusief omzetbelasting. Betalen met kaart. Strikt {age}+ — neem een geldig legitimatiebewijs mee."
+    "note": "Prijzen in Amerikaanse dollars, inclusief belasting. Betalen met kaart. Strikt {age}+, dus neem een geldig legitimatiebewijs mee."
   },
   "pv": {
     "eyebrow": "Privé-events",
@@ -144,7 +144,7 @@
     "msg": "Vertel ons over je event",
     "send": "Vraag een voorstel aan",
     "sending": "Versturen…",
-    "ok": "Dank je — je aanvraag is binnen. Je hoort binnen 24 uur van ons.",
+    "ok": "Dank je wel, je aanvraag is binnen. Je hoort binnen 24 uur van ons.",
     "err": "Dat ging niet goed. Probeer het opnieuw of neem rechtstreeks contact met ons op.",
     "alt": "Privédiner bij kaarslicht aan een buitentafel"
   },
@@ -262,7 +262,7 @@
     "groupApplied": "Groepstarief toegepast",
     "groupNudge": "Nog {n} erbij en je betaalt het groepstarief van ${group}",
     "upT": "Maak er een feest van",
-    "upLead": "Optionele tafelupgrades — elk voor maximaal zes gasten.",
+    "upLead": "Optionele tafelupgrades. Eén upgrade is genoeg voor een tafel van maximaal zes personen.",
     "none": "Nee bedankt, alleen de ervaring",
     "detailsT": "Wie komen er?",
     "fName": "Volledige naam",
@@ -293,12 +293,14 @@
     "errPhone": "Vul een telefoonnummer in waarop we je kunnen bereiken.",
     "errAge": "Bevestig dat alle gasten {age}+ zijn.",
     "errTerms": "Ga akkoord met de boekingsvoorwaarden.",
-    "errPay": "De checkout kon niet worden geopend. Probeer het opnieuw — of stuur ons je boeking rechtstreeks, dan bevestigen we persoonlijk.",
+    "errPay": "De checkout kon niet worden geopend. Probeer het opnieuw, of stuur ons je boeking rechtstreeks. Dan bevestigen we hem persoonlijk.",
     "waFallback": "Boeking via WhatsApp sturen",
     "waMsg": "Hoi Ambience! Ik wil graag boeken voor {guests} gast(en) op {date}. Naam: {name}. Upgrades: {addons}. Totaal: {total}.",
     "summary": "Jouw avond",
-    "demo": "Voorbeeldmodus — er wordt niets afgeschreven.",
-    "mailFallback": "Boeking per e-mail sturen"
+    "demo": "Voorbeeldmodus: er wordt niets afgeschreven.",
+    "mailFallback": "Boeking per e-mail sturen",
+    "prevMonth": "Vorige maand",
+    "nextMonth": "Volgende maand"
   },
   "ok": {
     "title": "Je staat op de lijst.",
@@ -308,13 +310,13 @@
     "paid": "Betaald",
     "tips": [
       "Kom om 17:00 uur voor het inchecken en je welkomstdrankje",
-      "Neem een geldig legitimatiebewijs mee — de avond is {age}+",
+      "Neem een geldig legitimatiebewijs mee. De avond is {age}+",
       "Draag iets waar een druppel verf op mag komen"
     ],
     "home": "Terug naar home",
     "cal": "Vragen? Stuur een WhatsApp",
     "unverifiedTitle": "We konden deze betaling niet verifiëren.",
-    "unverified": "Heb je net betaald? Dan is je bevestigingsmail onderweg en zijn je plaatsen veilig. Heb je de betaling niet afgerond, dan is er niets afgeschreven — je kunt gewoon opnieuw boeken."
+    "unverified": "Heb je net betaald? Dan komt je betaalbewijs per e-mail en zijn je plaatsen veilig. Heb je de betaling niet afgerond, dan is er niets afgeschreven en kun je gewoon opnieuw boeken."
   },
   "nf": {
     "title": "Deze pagina kunnen we niet vinden.",

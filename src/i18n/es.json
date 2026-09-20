@@ -122,7 +122,7 @@
     "bottleAlt": "Botellas y velas en una mesa al aire libre de noche",
     "perTable": "por mesa",
     "add": "Añadir al reservar",
-    "note": "Precios en dólares estadounidenses, impuestos incluidos. Pago con tarjeta. Estrictamente +{age} — trae un documento de identidad válido."
+    "note": "Precios en dólares estadounidenses, impuestos incluidos. Pago con tarjeta. Estrictamente +{age}: trae un documento de identidad válido."
   },
   "pv": {
     "eyebrow": "Eventos privados",
@@ -144,7 +144,7 @@
     "msg": "Cuéntanos sobre tu evento",
     "send": "Solicitar propuesta",
     "sending": "Enviando…",
-    "ok": "Gracias — recibimos tu solicitud. Te responderemos en menos de 24 horas.",
+    "ok": "Gracias, recibimos tu solicitud. Te respondemos en menos de 24 horas.",
     "err": "No se pudo enviar. Inténtalo de nuevo o contáctanos directamente.",
     "alt": "Cena privada a la luz de las velas en una mesa al aire libre"
   },
@@ -262,7 +262,7 @@
     "groupApplied": "Tarifa de grupo aplicada",
     "groupNudge": "Suma {n} más y paga la tarifa de grupo de ${group}",
     "upT": "Conviértelo en celebración",
-    "upLead": "Mejoras de mesa opcionales — cada una para hasta seis invitados.",
+    "upLead": "Mejoras de mesa opcionales. Una alcanza para una mesa de hasta seis personas.",
     "none": "No gracias, solo la experiencia",
     "detailsT": "¿Quién viene?",
     "fName": "Nombre completo",
@@ -293,12 +293,14 @@
     "errPhone": "Escribe un teléfono donde podamos contactarte.",
     "errAge": "Confirma que todos los invitados son +{age}.",
     "errTerms": "Acepta las condiciones de reserva.",
-    "errPay": "No pudimos abrir el pago. Inténtalo de nuevo — o envíanos tu reserva directamente y la confirmamos personalmente.",
+    "errPay": "No pudimos abrir el pago. Inténtalo de nuevo, o envíanos tu reserva directamente y la confirmamos personalmente.",
     "waFallback": "Enviar reserva por WhatsApp",
     "waMsg": "¡Hola Ambience! Quiero reservar para {guests} invitado(s) el {date}. Nombre: {name}. Mejoras: {addons}. Total: {total}.",
     "summary": "Tu velada",
-    "demo": "Modo de vista previa — no se realiza ningún cobro.",
-    "mailFallback": "Enviar reserva por correo"
+    "demo": "Modo de vista previa: no se realiza ningún cobro.",
+    "mailFallback": "Enviar reserva por correo",
+    "prevMonth": "Mes anterior",
+    "nextMonth": "Mes siguiente"
   },
   "ok": {
     "title": "Ya estás en la lista.",
@@ -308,13 +310,13 @@
     "paid": "Pagado",
     "tips": [
       "Llega a las 5:00 PM para el check-in y tu trago de bienvenida",
-      "Trae un documento válido — la velada es +{age}",
-      "Ponte algo que pueda recibir una gota de pintura"
+      "Trae un documento válido. La velada es +{age}",
+      "Ponte algo que aguante una gota de pintura"
     ],
     "home": "Volver al inicio",
     "cal": "¿Preguntas? Escríbenos por WhatsApp",
     "unverifiedTitle": "No pudimos verificar este pago.",
-    "unverified": "Si acabas de pagar, tu correo de confirmación va en camino y tus lugares están seguros. Si no completaste el pago, no se hizo ningún cobro — puedes reservar de nuevo."
+    "unverified": "Si acabas de pagar, tu recibo va en camino por correo y tus lugares están seguros. Si no completaste el pago, no se hizo ningún cobro y puedes reservar de nuevo."
   },
   "nf": {
     "title": "No encontramos esa página.",
