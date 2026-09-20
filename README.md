@@ -29,7 +29,7 @@ After any change run `npm run build` (output in `dist/`).
 1. `src/config.json`: real **WhatsApp number**, **email**, **Instagram**, **domain** (`siteUrl`) and Google Maps link. The build prints a warning while placeholders remain.
 2. Confirm the **upgrade prices** (`addons.hookah` = $95, `addons.bottle` = $220 are placeholders) and the inclusions/policies in the text (welcome drink, doormat size, 48-hour cancellation, free parking, private events 8–60 guests).
 3. Replace the stock photos (`images` in `src/config.json` are Unsplash photo IDs) with photos of the real landhuis and evenings. To use your own files, put them in `src/assets/` and adapt `img()` in `src/page.mjs`.
-4. Deploy to Netlify (build command and folders are already in `netlify.toml`).
+4. Deployed on Netlify as project `ambience-curacao` → https://ambience-curacao.netlify.app (build settings live in `netlify.toml`). When you connect your own domain, update `siteUrl` in `src/config.json` and redeploy.
 5. In Netlify → Environment variables set `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` (see `.env.example`).
 6. In Stripe → Developers → Webhooks add `https://YOUR-DOMAIN/api/stripe-webhook` with events `checkout.session.completed` and `checkout.session.expired`. Turn on Stripe's customer email receipts.
 7. Netlify → Forms: enable form detection so "private-event" requests arrive by email.

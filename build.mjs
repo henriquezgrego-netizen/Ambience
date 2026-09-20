@@ -61,6 +61,6 @@ out('_headers', `/assets/*\n  Cache-Control: public, max-age=604800\n/*\n  X-Con
 
 const placeholders = [];
 if (/0000000$/.test(cfg.contact.whatsapp)) placeholders.push('contact.whatsapp');
-if (cfg.siteUrl.includes('ambiencecuracao.com')) placeholders.push('siteUrl (confirm your real domain)');
+if (cfg.siteUrl.includes('netlify.app')) placeholders.push('siteUrl (switch to your own domain once it is connected)');
 console.log(`built ${langs.length} languages -> ${DIST}/`);
 if (placeholders.length) console.warn('! placeholder values still in src/config.json:', placeholders.join(', '));
