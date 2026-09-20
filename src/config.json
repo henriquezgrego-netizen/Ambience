@@ -1,0 +1,51 @@
+{
+  "siteUrl": "https://www.ambiencecuracao.com",
+  "brand": "Ambience Curaçao",
+  "currency": "USD",
+  "capacity": 20,
+  "minAge": 18,
+  "pricing": {
+    "perPerson": 85,
+    "groupSize": 6,
+    "groupPrice": 375
+  },
+  "addons": {
+    "hookah": { "price": 95 },
+    "bottle": { "price": 220 }
+  },
+  "schedule": {
+    "weekdays": [4, 5, 6, 0],
+    "checkIn": "17:00",
+    "start": "17:30",
+    "end": "20:30",
+    "timezone": "America/Curacao",
+    "bookAheadDays": 120,
+    "sameDayCutoffHour": 14
+  },
+  "contact": {
+    "email": "hello@ambiencecuracao.com",
+    "whatsapp": "59990000000",
+    "whatsappDisplay": "+599 9 000 0000",
+    "instagram": "https://www.instagram.com/ambiencecuracao",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sali%C3%B1a%2C+Willemstad%2C+Cura%C3%A7ao",
+    "street": "Saliña",
+    "city": "Willemstad",
+    "country": "CW"
+  },
+  "images": {
+    "hero": "photo-1574482211311-45a2169db57c",
+    "story": "photo-1782201591364-39945c7f39d2",
+    "paint": "photo-1753098498106-0319c1d646ca",
+    "sip": "photo-1725268093455-061ff2ed6c08",
+    "dj": "photo-1570441643212-8bd2d8fa7d40",
+    "hookah": "photo-1511302188604-d1d5ba206381",
+    "bottle": "photo-1621687334213-5af1d3716bfe",
+    "bites": "photo-1485963631004-f2f00b1d6606",
+    "private": "photo-1676480084470-4f45baf63ed6",
+    "location": "photo-1707073684800-e7291e6ad0d3",
+    "table": "photo-1757085242652-f8cd4d3de889",
+    "sunset": "photo-1648825028164-876aae51a8c6",
+    "doormat": "photo-1615927998810-ca467ad48c5f",
+    "cheers": "photo-1665422265873-ee82b042f337"
+  }
+}

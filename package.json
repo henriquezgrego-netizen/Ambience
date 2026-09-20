@@ -1,0 +1,18 @@
+{
+  "name": "ambience-curacao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ambience Curaçao — sunset paint & sip experience website with booking + Stripe checkout",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node serve.mjs",
+    "assets": "node tools/make-assets.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
