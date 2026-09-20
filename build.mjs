@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
-import { renderHome, renderSuccess, render404, hasWhatsapp } from './src/page.mjs';
+import { renderHome, renderSuccess, render404, renderLanding, hasWhatsapp } from './src/page.mjs';
 
 const cfg = JSON.parse(readFileSync('src/config.json', 'utf8'));
 const langs = ['en', 'nl', 'es'];
@@ -35,24 +35,30 @@ cpSync('src/assets/favicon.ico', join(DIST, 'favicon.ico'));
 cpSync('src/styles.css', join(DIST, 'assets/styles.css'));
 cpSync('src/app.js', join(DIST, 'assets/app.js'));
 
+const T = Object.fromEntries(langs.map((l) => [l, fill(JSON.parse(readFileSync(`src/i18n/${l}.json`, 'utf8')))]));
+// landing pages: same key in every language, translated slug
+const landingUrls = (key) => Object.fromEntries(langs.map((l) => [l, `${pathOf(l)}${T[l].pages.find((p) => p.key === key).slug}/`]));
+
 for (const lang of langs) {
-  const t = fill(JSON.parse(readFileSync(`src/i18n/${lang}.json`, 'utf8')));
+  const t = T[lang];
   const ctx = { t, cfg, lang, langs, pathOf, v };
   const base = pathOf(lang).slice(1);
   out(`${base}index.html`, renderHome(ctx));
   out(`${base}booking/success/index.html`, renderSuccess(ctx));
+  for (const page of t.pages) out(`${base}${page.slug}/index.html`, renderLanding(ctx, page, landingUrls(page.key)));
   if (lang === 'en') out('404.html', render404(ctx));
 }
 
 const today = new Date().toISOString().slice(0, 10);
+const groups = [Object.fromEntries(langs.map((l) => [l, pathOf(l)])), ...T.en.pages.map((p) => landingUrls(p.key))];
 out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${langs.map((l) => `  <url>
-    <loc>${cfg.siteUrl}${pathOf(l)}</loc>
+${groups.flatMap((g) => langs.map((l) => `  <url>
+    <loc>${cfg.siteUrl}${g[l]}</loc>
     <lastmod>${today}</lastmod>
-${langs.map((a) => `    <xhtml:link rel="alternate" hreflang="${a}" href="${cfg.siteUrl}${pathOf(a)}"/>`).join('\n')}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}/"/>
-  </url>`).join('\n')}
+${langs.map((x) => `    <xhtml:link rel="alternate" hreflang="${x}" href="${cfg.siteUrl}${g[x]}"/>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${g.en}"/>
+  </url>`)).join('\n')}
 </urlset>
 `);
 out('robots.txt', `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /booking/\nDisallow: /nl/booking/\nDisallow: /es/booking/\n\nSitemap: ${cfg.siteUrl}/sitemap.xml\n`);

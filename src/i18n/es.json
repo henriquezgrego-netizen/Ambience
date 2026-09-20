@@ -2,10 +2,10 @@
   "langName": "Español",
   "locale": "es_ES",
   "meta": {
-    "title": "Ambience Curaçao | Paint & Sip al atardecer · Qué hacer en Curazao",
-    "description": "¿Qué hacer en Curazao? Pinta tu propio felpudo al atardecer con cócteles, bocados y DJ en vivo en un landhuis de Willemstad. Jue–dom, desde ${pp}. +18.",
-    "keywords": "qué hacer en Curazao, que hacer en Curaçao, actividades en Curazao, planes en Curazao, tours en Curazao, excursiones en Curazao, paint and sip Curazao, vida nocturna Curazao, qué hacer en Willemstad, atardecer en Curazao, recuerdos de Curazao, despedida de soltera Curazao, eventos privados Curazao, hookah Curazao, turismo Curazao",
-    "ogTitle": "Paint. Sip. Feel the Ambience. — la experiencia al atardecer de Curazao",
+    "title": "Sip and Paint en Curazao | Pinta al atardecer – Ambience",
+    "description": "¿Qué hacer en Curazao? Pinta tu propio felpudo al atardecer con trago de bienvenida, bocados y DJ en un landhuis de Willemstad. Jue–dom, desde ${pp}. +18.",
+    "keywords": "sip and paint Curazao, paint and sip Curazao, pinta y vino Curazao, qué hacer en Curazao, qué hacer en Curazao de noche, actividades en Curazao, planes en Curazao, vida nocturna Curazao, qué hacer en Willemstad, Curazao en pareja, despedida de soltera Curazao, team building Curazao, recuerdos de Curazao, eventos privados Curazao, hookah Curazao",
+    "ogTitle": "Sip and paint al atardecer en Curazao | Ambience",
     "successTitle": "Reserva confirmada | Ambience Curaçao",
     "notFoundTitle": "Página no encontrada | Ambience Curaçao"
   },
@@ -26,11 +26,11 @@
     "skip": "Saltar intro"
   },
   "hero": {
-    "eyebrow": "Curazao · Experiencia Paint & Sip al atardecer",
+    "eyebrow": "Sip & paint al atardecer · Willemstad, Curazao",
     "l1": "Paint.",
     "l2": "Sip.",
     "l3": "Feel the Ambience.",
-    "sub": "Pintura de felpudos en la hora dorada, bocados isleños, buenos tragos y DJ en vivo — en un landhuis histórico de Saliña, Willemstad.",
+    "sub": "Pinta tu propio felpudo mientras cae el sol, con tragos, bocados isleños y DJ, en un landhuis de Saliña.",
     "cta1": "Reserva en el landhuis",
     "cta2": "Llevamos Ambience a ti",
     "from": "Desde",
@@ -45,61 +45,61 @@
     "age": "Solo +18"
   },
   "story": {
-    "eyebrow": "Más que un souvenir",
-    "title": "No compres un recuerdo de Curazao. <em>Créalo.</em>",
-    "p1": "Los imanes de nevera terminan en un cajón. Un felpudo pintado por ti — bajo las palmeras, con un trago en la mano, mientras el sol del Caribe se esconde detrás de Willemstad — te da la bienvenida cada vez que llegas a casa.",
-    "p2": "Ambience es una velada de tres horas para adultos: una sesión de pintura guiada que cualquiera puede hacer, bocados isleños, un bar que sabe lo que hace y un DJ que lee el ambiente. Ven en pareja, con tu grupo o por tu cuenta. Llévate lo único de tu viaje que de verdad vas a usar.",
+    "eyebrow": "Un recuerdo hecho por ti",
+    "title": "Olvídate del imán de nevera. <em>Pinta tu propio felpudo.</em>",
+    "p1": "La mayoría de los souvenirs terminan en un cajón. Este termina en la puerta de tu casa. En Ambience pasas una velada en un landhuis de Curazao pintando tu propio diseño sobre un felpudo de fibra de coco, con un trago junto a los pinceles y música de fondo.",
+    "p2": "No hace falta saber dibujar. Trabajamos con plantillas, nuestros anfitriones te muestran cómo, y a las ocho y media tu felpudo está seco y envuelto para el vuelo de regreso. La velada es solo para adultos y admitimos un máximo de {cap} invitados, para que en la mesa se pueda conversar.",
     "s1n": "{cap}",
-    "s1": "invitados máx. por velada",
+    "s1": "invitados por velada, como máximo",
     "s2n": "3 h",
-    "s2": "de hora dorada, música y pintura",
+    "s2": "de pintura, tragos y música",
     "s3n": "1",
-    "s3": "felpudo, hecho por ti",
+    "s3": "felpudo para llevar a casa",
     "imgAlt": "Cóctel al atardecer bajo las palmeras en Curazao"
   },
   "exp": {
-    "eyebrow": "La experiencia",
-    "title": "Tu velada, cuidada hasta el último detalle.",
-    "c1t": "Crea tu propio felpudo",
-    "c1": "Elige un diseño — hojas tropicales, el skyline de Curazao, tu apellido, “Bon Bini” — o improvisa. Nuestros anfitriones te guían paso a paso. No hace falta talento: plantillas y todos los materiales incluidos.",
+    "eyebrow": "La velada de sip and paint",
+    "title": "Qué incluye la velada",
+    "c1t": "Pinta tu propio felpudo",
+    "c1": "Elige una plantilla (hojas de palma, el skyline de Handelskade, “Bon Bini”, tu apellido) o trae tu propia idea. El felpudo, la pintura, los pinceles y el delantal están incluidos, y un anfitrión te ayuda en cada paso.",
     "c1alt": "Invitada pintando un diseño durante una velada de paint and sip",
-    "c2t": "Brinda y disfruta bocados isleños",
-    "c2": "Empieza con un trago de bienvenida y luego pide en el bar mientras el cielo se vuelve dorado. Mejora tu mesa con una tabla de bocados, una botella de tu licor favorito o una hookah.",
+    "c2t": "Tragos y bocados isleños",
+    "c2": "Empiezas con un trago de bienvenida. Después el bar sigue abierto con cócteles, vino y cerveza, y puedes añadir para tu mesa una tabla de bocados, una hookah o una botella.",
     "c2alt": "Amigos brindando con cócteles en Curazao",
-    "c3t": "DJ y MC en vivo",
-    "c3": "Ritmos afrocaribeños, house con alma y clásicos que levantan el ánimo — nuestro DJ y MC mantienen la energía cálida, nunca abrumadora. Una fiesta en la que todavía se puede conversar.",
+    "c3t": "DJ y MC",
+    "c3": "Nuestro DJ pone música caribeña, afro y soulful house a un volumen que todavía deja conversar. El MC mantiene el ritmo de la velada y se encarga de que nadie pinte solo.",
     "c3alt": "DJ tocando un set al atardecer en un controlador"
   },
   "flow": {
     "eyebrow": "La velada",
-    "title": "Así transcurre la noche",
+    "title": "La velada, hora por hora",
     "t1": "5:00 PM",
     "t1t": "Llega y acomódate",
-    "t1d": "Haz el check-in en el landhuis, toma tu trago de bienvenida y busca tu lugar en la mesa larga.",
+    "t1d": "Haz el check-in en el landhuis, recoge tu trago de bienvenida y elige un lugar en la mesa larga.",
     "t2": "5:30 PM",
     "t2t": "Diseño y primeras pinceladas",
-    "t2d": "Elige tu plantilla o dibuja la tuya. Tu anfitrión muestra la técnica y luego: ¡pinceles arriba!",
+    "t2d": "Escoge tu plantilla o dibuja tu propio diseño. Tu anfitrión muestra la técnica y empiezas a pintar.",
     "t3": "6:30 PM",
-    "t3t": "Hora dorada",
-    "t3d": "Cae el sol, se encienden las luces y el DJ sube un punto. Este es el momento de la foto.",
+    "t3t": "Atardecer",
+    "t3d": "Hacia las seis y media la luz se vuelve dorada. Es el momento en que casi todos sacan sus fotos.",
     "t4": "7:15 PM",
-    "t4t": "Bocados, beats y últimos detalles",
-    "t4d": "Llegan las tablas a la mesa, brillan las hookahs y tu felpudo recibe los toques finales.",
+    "t4t": "Bocados y últimos detalles",
+    "t4d": "Llegan las tablas y las hookahs mientras das los últimos toques.",
     "t5": "8:30 PM",
     "t5t": "Llévatelo a casa",
-    "t5d": "Tu felpudo está seco, envuelto y listo para la maleta. La noche en Willemstad apenas comienza."
+    "t5d": "Tu felpudo está seco y envuelto para el viaje. Si quieres seguir la noche, los bares de Pietermaai están a diez minutos."
   },
   "pk": {
     "eyebrow": "Paquetes y precios",
     "title": "Elige tu Ambience",
-    "lead": "Una entrada todo incluido para toda la velada. Añade una mejora de mesa si hay algo que celebrar.",
+    "lead": "Una sola entrada cubre toda la velada. Las mejoras de mesa son opcionales.",
     "soloTag": "El más reservado",
     "soloT": "Paint & Sip",
-    "soloD": "La experiencia completa al atardecer, por persona.",
+    "soloD": "Todo lo que necesitas para la velada, por persona.",
     "per": "por persona",
     "groupTag": "Mejor precio",
     "groupT": "Grupo de {groupSize}",
-    "groupD": "Seis asientos juntos en la mesa larga — ideal para amigos, familia y despedidas de soltera.",
+    "groupD": "Seis asientos juntos en la mesa larga. Muy pedido por grupos de amigos, familias y despedidas de soltera.",
     "groupPer": "para {groupSize} invitados",
     "groupSave": "Ahorra ${save} frente a entradas individuales",
     "inc": [
@@ -113,12 +113,12 @@
     "book": "Reservar",
     "bookGroup": "Reservar para {groupSize}",
     "upT": "Mejoras de mesa",
-    "upLead": "Añádelas a cualquier reserva. Cada mejora está pensada para compartir entre hasta seis invitados.",
+    "upLead": "Añádelas al reservar. Una mejora alcanza para una mesa de hasta seis personas.",
     "hookahT": "Hookah & Bites",
-    "hookahD": "Una hookah premium del sabor que elijas y una tabla para compartir con bocados isleños fríos y calientes.",
+    "hookahD": "Una hookah del sabor que elijas y una tabla de bocados fríos y calientes para compartir.",
     "hookahAlt": "Hookah encendida de noche",
     "bottleT": "Bottle, Hookah & Bites",
-    "bottleD": "La mesa completa: una botella de licor premium con mezcladores y hielo, una hookah y la tabla de bocados isleños para compartir.",
+    "bottleD": "Una botella de licor premium con mezcladores y hielo, una hookah y la tabla de bocados para compartir.",
     "bottleAlt": "Botellas y velas en una mesa al aire libre de noche",
     "perTable": "por mesa",
     "add": "Añadir al reservar",
@@ -127,12 +127,12 @@
   "pv": {
     "eyebrow": "Eventos privados",
     "title": "Tu lugar. Nuestro Ambience.",
-    "p": "Villa, cubierta de barco, casa de playa o sala de juntas — llevamos mesas, felpudos, pintura, anfitriones y música hasta ti. Cumpleaños, despedidas de soltera, team building, fines de semana de boda y eventos de marca, en cualquier lugar de Curazao.",
+    "p": "Llevamos las mesas, los felpudos, la pintura, los anfitriones y la música a tu villa, resort, barco u oficina. Nos reservan para cumpleaños, despedidas de soltera, salidas de empresa y fines de semana de boda en cualquier lugar de Curazao.",
     "li": [
-      "De 8 a 60 invitados",
-      "En tu villa, resort o local — o una noche privada en el landhuis",
-      "Plantillas personalizadas con sus nombres, logo o fecha",
-      "Opcional: bar, bocados, hookah y DJ / MC"
+      "Grupos de 8 a 60 personas",
+      "En tu lugar, o una velada privada en el landhuis",
+      "Plantillas con sus nombres, logo o fecha",
+      "Bar, bocados, hookah y DJ o MC a pedido"
     ],
     "formT": "Solicita un evento privado",
     "name": "Tu nombre",
@@ -149,81 +149,85 @@
     "alt": "Cena privada a la luz de las velas en una mesa al aire libre"
   },
   "gal": {
-    "eyebrow": "El ambiente",
-    "title": "Hora dorada, cada velada.",
+    "eyebrow": "Fotos",
+    "title": "Así es la velada",
     "a1": "Invitados pintando juntos en una mesa larga",
     "a2": "Atardecer sobre la costa de Curazao",
     "a3": "Tabla de bocados isleños para compartir",
     "a4": "Felpudo de coco pintado a mano frente a una puerta",
     "a5": "Amigos levantando sus copas",
-    "note": "Imágenes ilustrativas — las fotos de nuestras veladas están en Instagram."
+    "note": "Algunas fotos de esta página son ilustrativas. Nuestras propias veladas están en Instagram."
   },
   "loc": {
     "eyebrow": "Dónde estamos",
-    "title": "Una velada de landhuis en Saliña",
-    "p": "Los landhuizen de Curazao son sus grandes casas de campo del siglo XVIII. El nuestro está en Saliña, el corazón animado de Willemstad — a diez minutos de Punda, Pietermaai y las terminales de cruceros, y a quince de Jan Thiel y Mambo Beach.",
+    "title": "Nos encuentras en Saliña",
+    "p": "Un landhuis es una de las casas de plantación históricas de Curazao. El nuestro está en Saliña, en pleno Willemstad: a unos diez minutos en carro de Punda, Pietermaai y las terminales de cruceros, y a quince de Jan Thiel y Mambo Beach.",
     "l1t": "Cuándo",
     "l1": "De jueves a domingo · check-in 5:00 PM · experiencia 5:30 – 8:30 PM",
     "l2t": "Dónde",
-    "l2": "Landhuis en Saliña, Willemstad, Curazao. La dirección exacta y la información de parqueo llegan con tu confirmación.",
+    "l2": "Landhuis en Saliña, Willemstad, Curazao. Te enviamos la dirección exacta y cómo llegar en cuanto reserves.",
     "l3t": "Cómo llegar",
-    "l3": "Parqueo gratuito en el lugar. Un taxi desde la mayoría de los hoteles tarda 10 – 15 minutos; con gusto coordinamos tu regreso.",
+    "l3": "Hay parqueo en el landhuis. Un taxi desde la mayoría de los hoteles tarda de 10 a 15 minutos, y con gusto te pedimos uno para el regreso.",
     "map": "Abrir en Google Maps",
     "alt": "El malecón de Willemstad, Curazao, iluminado de noche"
   },
   "faq": {
-    "eyebrow": "Bueno saberlo",
+    "eyebrow": "Antes de reservar",
     "title": "Preguntas frecuentes",
     "items": [
       {
         "q": "¿Qué es Ambience Curaçao?",
-        "a": "Ambience es una experiencia de paint & sip al atardecer en Willemstad, Curazao. En tres horas diseñas y pintas tu propio felpudo de fibra de coco mientras disfrutas de tragos, bocados isleños y DJ en vivo en un landhuis histórico de Saliña. De jueves a domingo de 5:30 a 8:30 PM, con check-in a las 5:00 PM."
+        "a": "Ambience es una velada de sip and paint al atardecer en Willemstad, Curazao. En lugar de un lienzo pintas un felpudo de fibra de coco que te llevas a casa. La velada incluye un trago de bienvenida, DJ y MC, y se realiza de jueves a domingo de 5:30 a 8:30 PM en un landhuis de Saliña. El check-in abre a las 5:00 PM."
       },
       {
         "q": "¿Cuánto cuesta?",
-        "a": "La entrada cuesta ${pp} por persona. Un grupo de {groupSize} paga ${group} en total. Incluye el felpudo, todos los materiales, la guía, un trago de bienvenida y el entretenimiento de DJ / MC. Las mejoras de mesa con hookah, bocados y botella son opcionales."
+        "a": "La entrada cuesta ${pp} por persona. Un grupo de {groupSize} paga ${group} en total. El precio cubre tu felpudo, todos los materiales, la guía de un anfitrión, un trago de bienvenida y el DJ y MC. Las mejoras de mesa con hookah, bocados y botella son opcionales."
       },
       {
-        "q": "¿Tengo que saber pintar?",
-        "a": "Para nada. Trabajamos con plantillas y una técnica sencilla de toques, y tu anfitrión te guía en cada paso. La mayoría de nuestros invitados nunca ha pintado — y todos los felpudos se van a casa viéndose geniales."
+        "q": "¿Necesito experiencia pintando?",
+        "a": "No. Pintamos con plantillas y una técnica sencilla de toques, y un anfitrión te ayuda en cada paso. La mayoría de nuestros invitados nunca había pintado."
       },
       {
         "q": "¿Hay límite de edad?",
-        "a": "Sí. Ambience es una velada solo para adultos con servicio de alcohol y hookah, por lo que todos los invitados deben tener {age} años o más. Trae un documento de identidad válido."
+        "a": "Sí. Servimos alcohol y hookah, así que todos los invitados deben tener {age} años o más. Trae un documento de identidad válido."
+      },
+      {
+        "q": "¿Es buen plan para una cita o una despedida de soltera?",
+        "a": "Sí. Las parejas suelen reservar dos asientos en la mesa larga. Un grupo de {groupSize} paga ${group} en total, y para despedidas de soltera más grandes, cumpleaños o salidas de empresa organizamos una velada privada o vamos a tu villa."
       },
       {
         "q": "¿Puedo llevar mi felpudo en el avión?",
-        "a": "Sí. El felpudo mide 40 × 60 cm, cabe plano en una maleta estándar y pesa alrededor de 1,5 kg. La pintura está seca al final de la noche y te lo envolvemos para el viaje."
+        "a": "Sí. El felpudo mide 40 × 60 cm y cabe plano en una maleta normal. La pintura está seca al final de la velada y nosotros lo envolvemos para el viaje."
       },
       {
         "q": "Llego en crucero. ¿Puedo participar?",
-        "a": "Si tu barco permanece en puerto por la noche, sí. El landhuis está a unos diez minutos en taxi del Mega Pier y del Mathey Wharf. Revisa tu hora de embarque antes de reservar; la experiencia termina a las 8:30 PM."
+        "a": "Sí, si tu barco se queda en puerto por la noche. El landhuis está a unos diez minutos en taxi del Mega Pier y del Mathey Wharf. Revisa tu hora de embarque antes de reservar: la velada termina a las 8:30 PM."
       },
       {
-        "q": "¿Cuántas personas participan por velada?",
-        "a": "Lo mantenemos íntimo: máximo {cap} invitados por velada. Las fechas populares se agotan, así que te recomendamos reservar antes de viajar."
+        "q": "¿Cuántas personas participan en cada velada?",
+        "a": "Máximo {cap}. Los fines de semana se llenan primero, así que conviene reservar antes de viajar."
       },
       {
         "q": "¿Qué pasa si llueve?",
-        "a": "Curazao es soleado casi todo el año y los aguaceros pasan rápido. El landhuis tiene terrazas techadas, así que la velada continúa. Si alguna vez tenemos que cancelar, tú eliges: nueva fecha o reembolso completo."
+        "a": "Los aguaceros en Curazao suelen ser cortos y el landhuis tiene terrazas techadas, así que la velada se realiza igual. Si alguna vez tenemos que cancelar, tú eliges entre otra fecha y el reembolso completo."
       },
       {
         "q": "¿Puedo cancelar o cambiar mi reserva?",
-        "a": "Puedes cambiar o cancelar sin costo hasta 48 horas antes de tu velada. Dentro de las 48 horas la reserva no es reembolsable, pero puedes cederle tu lugar a otra persona."
+        "a": "Puedes cambiar o cancelar sin costo hasta 48 horas antes de tu velada. Después la reserva no es reembolsable, pero otra persona puede ocupar tu lugar."
       },
       {
         "q": "¿Qué me pongo?",
-        "a": "Island chic. Te damos un delantal, pero la pintura acrílica es permanente — mejor deja el lino blanco para otra noche."
+        "a": "Lo mismo que te pondrías para tomar algo en una terraza. Te damos un delantal, pero la pintura acrílica no sale, así que deja tu lino blanco favorito en el hotel."
       }
     ]
   },
   "cta": {
-    "title": "Tu mejor noche en Curazao empieza a las cinco.",
-    "p": "Solo {cap} lugares por velada. Reserva el tuyo antes de volar.",
+    "title": "Máximo {cap} invitados por velada.",
+    "p": "Reserva tu fecha antes de viajar. De jueves a domingo, desde ${pp} por persona.",
     "btn": "Reserva tu velada"
   },
   "ft": {
-    "tag": "Experiencia paint & sip al atardecer · Willemstad, Curazao",
+    "tag": "Veladas de sip and paint al atardecer en Willemstad, Curazao",
     "explore": "Explora",
     "contact": "Contacto",
     "visit": "Visítanos",
@@ -231,7 +235,8 @@
     "addr": "Landhuis, Saliña, Willemstad, Curazao",
     "age": "Ambience es una experiencia +{age}. Disfruta con responsabilidad.",
     "rights": "Todos los derechos reservados.",
-    "wa": "Escríbenos por WhatsApp"
+    "wa": "Escríbenos por WhatsApp",
+    "guides": "Ideas"
   },
   "sticky": {
     "from": "Desde ${pp} p.p.",
@@ -297,7 +302,7 @@
   },
   "ok": {
     "title": "Ya estás en la lista.",
-    "p": "Gracias — recibimos tu pago y tus lugares en Ambience están reservados. Una confirmación con la dirección exacta, información de parqueo y qué traer va en camino a tu correo.",
+    "p": "Gracias. Tu pago se realizó y tus lugares están reservados. El recibo te llega por correo, y antes de tu velada te enviamos la dirección exacta y cómo llegar.",
     "when": "Tu velada",
     "guests": "Invitados",
     "paid": "Pagado",
@@ -312,8 +317,8 @@
     "unverified": "Si acabas de pagar, tu correo de confirmación va en camino y tus lugares están seguros. Si no completaste el pago, no se hizo ningún cobro — puedes reservar de nuevo."
   },
   "nf": {
-    "title": "Esta página se fue con el atardecer.",
-    "p": "La página que buscas no existe.",
+    "title": "No encontramos esa página.",
+    "p": "Puede que el enlace sea antiguo o que la página se haya movido.",
     "home": "Volver al inicio"
   },
   "days": [
@@ -324,5 +329,155 @@
     "jue",
     "vie",
     "sáb"
+  ],
+  "lp": {
+    "home": "Inicio",
+    "book": "Reserva tu velada",
+    "priv": "Solicita un evento privado",
+    "faq": "Preguntas",
+    "more": "Más ideas"
+  },
+  "pages": [
+    {
+      "key": "night",
+      "slug": "que-hacer-en-curazao-de-noche",
+      "image": "hero",
+      "cta": "book",
+      "title": "Qué hacer en Curazao de noche: 7 planes | Ambience",
+      "description": "Siete planes para la noche en Curazao: de Punda Vibes y los bares de Pietermaai a una velada de sip and paint al atardecer en un landhuis de Willemstad.",
+      "nav": "Qué hacer en Curazao de noche",
+      "eyebrow": "Guía nocturna",
+      "h1": "Qué hacer en Curazao de noche",
+      "intro": "Las playas se llevan casi toda la atención, pero Curazao es igual de buena cuando cae el sol. Estos son los planes que recomendamos a nuestros propios invitados, el nuestro incluido.",
+      "sections": [
+        {
+          "h": "1. Pinta tu propio felpudo al atardecer",
+          "p": "De jueves a domingo, Ambience organiza una velada de sip and paint en un landhuis de Saliña. Pintas un felpudo de fibra de coco con un trago de bienvenida en la mano mientras suena un DJ, y a las 8:30 PM terminas con el resto de la noche por delante. La entrada cuesta ${pp} y el cupo es de {cap} invitados por velada."
+        },
+        {
+          "h": "2. Punda Vibes los jueves",
+          "p": "Cada jueves por la noche el casco antiguo de Punda se convierte en una fiesta callejera gratuita con música en vivo, arte local, puestos de comida y fuegos artificiales. Es la forma más fácil de mezclarte con la gente de la isla."
+        },
+        {
+          "h": "3. Cruza el puente Reina Emma de noche",
+          "p": "El puente flotante entre Punda y Otrobanda se ilumina por la noche, con el malecón de Handelskade de fondo. Es gratis, toma diez minutos y es la foto que casi todos se llevan a casa."
+        },
+        {
+          "h": "4. De bar en bar por Pietermaai",
+          "p": "En las casonas restauradas de Pietermaai está la mayoría de las coctelerías y locales de música en vivo de Willemstad, todos a poca distancia a pie."
+        },
+        {
+          "h": "5. Navega al atardecer",
+          "p": "Varios operadores salen en catamarán a recorrer la costa y regresan después del atardecer, por lo general con tragos y picadas a bordo."
+        },
+        {
+          "h": "6. Baila en Jan Thiel o Mambo Beach",
+          "p": "Los fines de semana, los beach clubs de Jan Thiel y Mambo Beach se vuelven pistas de baile al aire libre, con DJ y los pies en la arena."
+        },
+        {
+          "h": "7. Los murales de Otrobanda al caer la tarde",
+          "p": "Los recorridos guiados pasan por el arte urbano de Otrobanda cuando el calor del día ya bajó."
+        },
+        {
+          "h": "Cómo combinarlos",
+          "p": "Ambience termina a las 8:30 PM, así que queda tiempo para cenar o tomar algo en Pietermaai. Los jueves todavía alcanzas Punda Vibes de camino."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿A qué hora se pone el sol en Curazao?",
+          "a": "Entre las 6:15 PM en invierno y las 7:00 PM en verano, aproximadamente. Curazao está cerca del ecuador, así que la hora cambia poco durante el año."
+        },
+        {
+          "q": "¿Hay que reservar los planes nocturnos con anticipación?",
+          "a": "Ambience sí: el cupo es de {cap} invitados por velada y los fines de semana se llenan primero. Para los bares y Punda Vibes no hace falta reservar."
+        }
+      ]
+    },
+    {
+      "key": "bachelorette",
+      "slug": "despedida-de-soltera-curazao",
+      "image": "cheers",
+      "cta": "private",
+      "title": "Despedida de soltera en Curazao: velada sip & paint | Ambience",
+      "description": "¿Organizas una despedida de soltera en Curazao? Reserva una velada de sip and paint para el grupo: seis asientos por ${group}, veladas privadas y eventos en tu villa.",
+      "nav": "Despedida de soltera en Curazao",
+      "eyebrow": "Para grupos",
+      "h1": "Despedida de soltera en Curazao",
+      "intro": "Una velada de sip and paint le da a todo el grupo algo que hacer juntas antes de salir de fiesta, y la novia se lleva a casa un felpudo pintado por sus amigas.",
+      "sections": [
+        {
+          "h": "Cómo reservan los grupos",
+          "p": "Seis asientos cuestan ${group} en total, es decir, $62.50 por persona. Los grupos más grandes toman varios bloques de seis en la misma mesa larga, hasta {cap} invitados por velada. Añade la mejora Bottle, Hookah & Bites si quieres la mesa lista para celebrar."
+        },
+        {
+          "h": "Que sea privada",
+          "p": "Si quieren una fiesta solo para ustedes, reserven una velada privada en el landhuis o vamos a su villa con mesas, felpudos, pintura, anfitriones y DJ. Podemos preparar plantillas con los nombres de la pareja y la fecha de la boda."
+        },
+        {
+          "h": "Ideas para los felpudos",
+          "items": [
+            "Un felpudo compartido para el nuevo hogar de la pareja, firmado por todas",
+            "Felpudos a juego con la fecha de la boda",
+            "Un diseño sorpresa que la novia solo ve al sentarse"
+          ]
+        },
+        {
+          "h": "Después de las 8:30",
+          "p": "La velada termina a las 8:30 PM. Los bares de Pietermaai están a unos diez minutos en taxi."
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Hay un mínimo de personas?",
+          "a": "No para las veladas regulares: reserva los asientos que quieras, hasta {cap}. Los eventos privados son a partir de 8 personas."
+        },
+        {
+          "q": "¿Todas deben tener {age} años?",
+          "a": "Sí. Servimos alcohol y hookah, así que cada invitada debe tener {age} años o más y traer un documento de identidad válido."
+        }
+      ]
+    },
+    {
+      "key": "team",
+      "slug": "team-building-curazao",
+      "image": "table",
+      "cta": "private",
+      "title": "Team building en Curazao: actividad creativa | Ambience",
+      "description": "Una actividad creativa de team building en Curazao: pinten felpudos juntos en un landhuis o en su oficina. Para 8 a 60 colegas, con su logo en la plantilla.",
+      "nav": "Team building en Curazao",
+      "eyebrow": "Para empresas",
+      "h1": "Team building en Curazao",
+      "intro": "Una salida de equipo funciona cuando la gente conversa con colegas con los que casi nunca habla. Pintar codo a codo en una sola mesa larga lo logra, sin dinámicas forzadas ni animador.",
+      "sections": [
+        {
+          "h": "Cómo es una velada de equipo",
+          "p": "Tu equipo llega, recibe un trago y se sienta en la mesa larga. Un anfitrión explica la técnica con plantillas, un DJ suena de fondo, y dos o tres horas después cada persona tiene un felpudo para su casa o para la oficina."
+        },
+        {
+          "h": "En el landhuis o en su oficina",
+          "p": "Reserven una velada privada en el landhuis de Saliña, o vamos nosotros. Llevamos mesas, felpudos, pintura, delantales y anfitriones, y dejamos el espacio como lo encontramos."
+        },
+        {
+          "h": "Datos prácticos",
+          "items": [
+            "Grupos de 8 a 60 personas",
+            "Plantillas con su logo o los valores de la empresa",
+            "Bar, bocados y DJ son opcionales",
+            "Otros días y horarios a pedido"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Con cuánta anticipación hay que reservar?",
+          "a": "Lo antes posible. Los eventos privados los programamos alrededor de nuestras veladas fijas de jueves a domingo, así que las fechas más pedidas se van primero."
+        },
+        {
+          "q": "¿Pueden poner nuestro logo en los felpudos?",
+          "a": "Sí. Envíennos el logo en formato vectorial y cortamos una plantilla para su equipo."
+        }
+      ]
+    }
   ]
 }

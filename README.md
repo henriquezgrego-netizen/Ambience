@@ -16,13 +16,13 @@ Opens on http://localhost:4173. The local server **mocks** availability and paym
 | What | File |
 | --- | --- |
 | Prices, capacity (20), days/times, contact details, domain, photos | `src/config.json` |
-| All text — English / Dutch / Spanish | `src/i18n/en.json`, `nl.json`, `es.json` |
+| All text — English / Dutch / Spanish, including the SEO landing pages (`pages` array: slug, title, sections, FAQ) | `src/i18n/en.json`, `nl.json`, `es.json` |
 | Page structure, SEO tags, structured data | `src/page.mjs` |
 | Design, logo intro animation | `src/styles.css` |
 | Booking flow, calendar, interactions | `src/app.js` |
 | Logo → transparent PNGs, favicons, share image | `npm run assets` (reads `tools/logo-source.jpg`) |
 
-After any change run `npm run build` (output in `dist/`).
+After any change run `npm run build` (output in `dist/`), then `node tools/qa.mjs` to check every page for broken links, missing alts, bad meta tags and unreachable photos.
 
 ## Before going live — checklist
 

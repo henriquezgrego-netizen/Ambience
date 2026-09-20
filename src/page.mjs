@@ -29,9 +29,10 @@ const ic = {
 const BARS = [12, 26, 44, 66, 100, 66, 44, 26, 12];
 const wave = (cls = '') => `<div class="wave ${cls}" aria-hidden="true"><i class="wave-line"></i><span class="wave-bars">${BARS.map((h, i) => `<b style="--h:${h}%;--i:${i}"></b>`).join('')}</span><i class="wave-line"></i></div>`;
 
-function head({ t, cfg, lang, langs, pathOf, v, page = '', title, description, noindex = false, jsonld = [] }) {
-  const url = cfg.siteUrl + pathOf(lang) + page;
-  const alternates = noindex ? '' : langs.map((l) => `<link rel="alternate" hreflang="${l}" href="${cfg.siteUrl}${pathOf(l)}${page}">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${pathOf('en')}${page}">`;
+function head({ t, cfg, lang, langs, pathOf, v, page = '', urls = null, ogTitle = '', title, description, noindex = false, jsonld = [] }) {
+  const U = urls || Object.fromEntries(langs.map((l) => [l, pathOf(l) + page]));
+  const url = cfg.siteUrl + U[lang];
+  const alternates = noindex ? '' : langs.map((l) => `<link rel="alternate" hreflang="${l}" href="${cfg.siteUrl}${U[l]}">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${U.en}">`;
   return `<!doctype html>
 <html lang="${lang}">
 <head>
@@ -48,7 +49,7 @@ function head({ t, cfg, lang, langs, pathOf, v, page = '', title, description, n
   <meta name="geo.placename" content="Willemstad, Curaçao">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="${esc(cfg.brand)}">
-  <meta property="og:title" content="${esc(t.meta.ogTitle)}">
+  <meta property="og:title" content="${esc(ogTitle || t.meta.ogTitle)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${url}">
   <meta property="og:image" content="${cfg.siteUrl}/assets/og-image.jpg">
@@ -71,7 +72,7 @@ function head({ t, cfg, lang, langs, pathOf, v, page = '', title, description, n
 </head>`;
 }
 
-function header({ t, lang, langs, pathOf, home = '' }) {
+function header({ t, lang, langs, pathOf, home = '', urls = null }) {
   const link = (id, label) => `<a href="${home}#${id}">${label}</a>`;
   return `
 <header class="site-header" id="top">
@@ -86,7 +87,7 @@ function header({ t, lang, langs, pathOf, home = '' }) {
     ${link('private', t.nav.private)}
     ${link('faq', t.nav.faq)}
     <div class="lang" role="group" aria-label="${esc(t.nav.language)}">
-      ${langs.map((l) => `<a href="${pathOf(l)}" hreflang="${l}" lang="${l}" ${l === lang ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`).join('')}
+      ${langs.map((l) => `<a href="${urls ? urls[l] : pathOf(l)}" hreflang="${l}" lang="${l}" ${l === lang ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`).join('')}
     </div>
     ${home ? `<a class="btn btn-gold btn-sm" href="${home}#book">${t.nav.book}</a>` : `<button class="btn btn-gold btn-sm" data-book>${t.nav.book}</button>`}
   </nav>
@@ -114,6 +115,10 @@ function footer({ t, cfg, lang, pathOf }) {
       <a href="${pathOf(lang)}#packages">${t.nav.packages}</a>
       <a href="${pathOf(lang)}#private">${t.nav.private}</a>
       <a href="${pathOf(lang)}#faq">${t.nav.faq}</a>
+    </div>
+    <div>
+      <h3>${t.ft.guides}</h3>
+      ${t.pages.map((p) => `<a href="${pathOf(lang)}${p.slug}/">${p.nav}</a>`).join('\n      ')}
     </div>
     <div>
       <h3>${t.ft.visit}</h3>
@@ -146,6 +151,7 @@ export function renderHome(ctx) {
     '@type': ['LocalBusiness', 'TouristAttraction'],
     '@id': cfg.siteUrl + '/#business',
     name: cfg.brand,
+    alternateName: ['Ambience', 'Ambiance Curaçao', 'Ambience Sip & Paint'],
     description: t.meta.description,
     url: cfg.siteUrl + pathOf(lang),
     image: [cfg.siteUrl + '/assets/og-image.jpg'],
@@ -474,6 +480,7 @@ ${footer(ctx)}
   function show(b){if(!b)return;el.hidden=false;['date','guests','total'].forEach(function(k){el.querySelector('[data-ok="'+k+'"]').textContent=b[k]})}
   var saved=null;try{saved=JSON.parse(sessionStorage.getItem('amb-booking')||'null');sessionStorage.removeItem('amb-booking');sessionStorage.removeItem('amb-draft')}catch(e){}
   var id=new URLSearchParams(location.search).get('session_id');
+  if(!id&&!saved){location.replace(${JSON.stringify(pathOf(lang))});return}
   if(!id)return show(saved);
   fetch('/api/confirm-booking?session_id='+encodeURIComponent(id)).then(function(r){return r.json().then(function(j){return{ok:r.ok,status:r.status,j:j}})}).then(function(res){
     if(res.ok){var d=res.j.date.split('-');return show({date:new Intl.DateTimeFormat(lang,{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(Date.UTC(+d[0],+d[1]-1,+d[2]))),guests:String(res.j.guests),total:'$'+Number(res.j.total).toLocaleString('en-US')})}
@@ -498,6 +505,57 @@ ${header({ ...ctx, home: pathOf(lang) })}
     <p>${t.nf.p}</p>
     <div class="hero-cta"><a class="btn btn-gold" href="${pathOf(lang)}">${t.nf.home}</a></div>
   </div>
+</main>
+${footer(ctx)}
+<script src="/assets/app.js?v=${ctx.v}" defer></script>
+</body>
+</html>`;
+}
+
+export function renderLanding(ctx, page, urls) {
+  const { t, cfg, lang, pathOf } = ctx;
+  const home = pathOf(lang);
+  const url = cfg.siteUrl + urls[lang];
+  const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: page.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+  const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: cfg.brand, item: cfg.siteUrl + home },
+    { '@type': 'ListItem', position: 2, name: page.h1, item: url },
+  ] };
+  const primary = page.cta === 'private'
+    ? `<a class="btn btn-gold" href="${home}#private">${t.lp.priv}${ic.arrow}</a><a class="btn btn-line" href="${home}#book">${t.lp.book}</a>`
+    : `<a class="btn btn-gold" href="${home}#book">${t.lp.book}${ic.arrow}</a><a class="btn btn-line" href="${home}#packages">${t.nav.packages}</a>`;
+  const others = t.pages.filter((o) => o.key !== page.key);
+  return `${head({ ...ctx, urls, title: page.title, ogTitle: page.h1, description: page.description, jsonld: [faqLd, crumbs] })}
+<body class="plain">
+<a class="skip-link" href="#main">${t.nav.skip}</a>
+${header({ ...ctx, home, urls })}
+<main id="main" class="lp">
+  <section class="lp-hero">
+    <div class="lp-hero-bg">${img(cfg.images[page.image], '', { w: 1600, eager: true, sizes: '100vw' })}</div>
+    <div class="wrap narrow">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="${home}">${t.lp.home}</a><span aria-hidden="true">/</span><span>${page.nav}</span></nav>
+      <p class="eyebrow">${page.eyebrow}</p>
+      <h1>${page.h1}</h1>
+      <p class="lp-intro">${page.intro}</p>
+      <div class="hero-cta">${primary}</div>
+    </div>
+  </section>
+  <article class="wrap narrow lp-body">
+    ${page.sections.map((s) => `<section><h2>${s.h}</h2>${s.p ? `<p>${s.p}</p>` : ''}${s.items ? `<ul class="ticks">${s.items.map((x) => `<li>${ic.check}<span>${x}</span></li>`).join('')}</ul>` : ''}</section>`).join('\n    ')}
+    <section>
+      <h2>${t.lp.faq}</h2>
+      <div class="faq-list">${page.faq.map((f) => `<details><summary><h3>${f.q}</h3><i aria-hidden="true"></i></summary><p>${f.a}</p></details>`).join('')}</div>
+    </section>
+    <aside class="lp-cta">
+      <p class="eyebrow">${t.strip.days} · ${t.strip.time}</p>
+      <p class="lp-price">${t.hero.from} <strong>$${cfg.pricing.perPerson}</strong> ${t.hero.pp}</p>
+      <div class="hero-cta">${primary}</div>
+    </aside>
+    <nav class="lp-more" aria-label="${esc(t.lp.more)}">
+      <h2>${t.lp.more}</h2>
+      ${others.map((o) => `<a href="${home}${o.slug}/">${o.nav}${ic.arrow}</a>`).join('')}
+    </nav>
+  </article>
 </main>
 ${footer(ctx)}
 <script src="/assets/app.js?v=${ctx.v}" defer></script>

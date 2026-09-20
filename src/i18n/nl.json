@@ -2,10 +2,10 @@
   "langName": "Nederlands",
   "locale": "nl_NL",
   "meta": {
-    "title": "Ambience Curaçao | Paint & Sip bij zonsondergang · Wat te doen op Curaçao",
-    "description": "Wat te doen op Curaçao? Schilder je eigen deurmat bij zonsondergang met cocktails, hapjes & live DJ in een landhuis in Willemstad. Do–zo, vanaf ${pp}. 18+.",
-    "keywords": "wat te doen op Curaçao, activiteiten Curaçao, leuke uitjes Curaçao, excursies Curaçao, paint and sip Curaçao, workshop Curaçao, uitgaan Curaçao, Curaçao tips, vrijgezellenfeest Curaçao, groepsuitje Curaçao, souvenir Curaçao, zonsondergang Curaçao, shisha Curaçao, bedrijfsuitje Curaçao, Willemstad activiteiten",
-    "ogTitle": "Paint. Sip. Feel the Ambience. — dé sunset-ervaring van Curaçao",
+    "title": "Paint & Sip Curaçao | Workshop bij zonsondergang – Ambience",
+    "description": "Wat te doen op Curaçao? Schilder je eigen deurmat bij zonsondergang, met welkomstdrankje, hapjes en DJ in een landhuis in Willemstad. Do–zo, vanaf ${pp}.",
+    "keywords": "paint and sip Curaçao, sip and paint Curaçao, workshop Curaçao, wat te doen op Curaçao, uitgaan Curaçao, activiteiten Curaçao, leuke uitjes Curaçao, vrijgezellenfeest Curaçao, bedrijfsuitje Curaçao, personeelsuitje Curaçao, teambuilding Curaçao, souvenir Curaçao, Curaçao met vriendinnen, romantisch Curaçao, shisha Curaçao",
+    "ogTitle": "Paint & sip bij zonsondergang op Curaçao | Ambience",
     "successTitle": "Boeking bevestigd | Ambience Curaçao",
     "notFoundTitle": "Pagina niet gevonden | Ambience Curaçao"
   },
@@ -26,11 +26,11 @@
     "skip": "Intro overslaan"
   },
   "hero": {
-    "eyebrow": "Curaçao · Paint & Sip bij zonsondergang",
+    "eyebrow": "Paint & sip bij zonsondergang · Willemstad, Curaçao",
     "l1": "Paint.",
     "l2": "Sip.",
     "l3": "Feel the Ambience.",
-    "sub": "Deurmatten schilderen in het gouden uur, lokale hapjes, goede drankjes en een live DJ — in een historisch landhuis in Saliña, Willemstad.",
+    "sub": "Schilder je eigen deurmat terwijl de zon ondergaat, met drankjes, lokale hapjes en een DJ, in een landhuis in Saliña.",
     "cta1": "Boek in het landhuis",
     "cta2": "Ambience op jouw locatie",
     "from": "Vanaf",
@@ -45,61 +45,61 @@
     "age": "Alleen 18+"
   },
   "story": {
-    "eyebrow": "Meer dan een souvenir",
-    "title": "Koop geen herinnering aan Curaçao. <em>Maak er één.</em>",
-    "p1": "Koelkastmagneten verdwijnen in een la. Een deurmat die je zelf hebt geschilderd — onder de palmen, drankje in de hand, terwijl de Caribische zon achter Willemstad zakt — verwelkomt je elke keer dat je thuiskomt.",
-    "p2": "Ambience is een avond van drie uur voor volwassenen: een begeleide schildersessie die iedereen kan, lokale hapjes, een bar die weet wat ze doet en een DJ die de sfeer aanvoelt. Kom als stel, met je vriendengroep of alleen. Ga naar huis met het enige souvenir dat je écht gaat gebruiken.",
+    "eyebrow": "Een souvenir dat je zelf maakt",
+    "title": "Laat die koelkastmagneet liggen. <em>Schilder je eigen deurmat.</em>",
+    "p1": "De meeste souvenirs belanden in een la. Dit souvenir ligt straks bij je voordeur. Bij Ambience schilder je een avond lang in een Curaçaos landhuis je eigen ontwerp op een kokosmat, met een drankje naast je kwasten en muziek op de achtergrond.",
+    "p2": "Je hoeft niet te kunnen tekenen. We werken met sjablonen, onze hosts doen het voor, en om half negen is je deurmat droog en ingepakt voor de vlucht naar huis. De avond is alleen voor volwassenen en we laten maximaal {cap} gasten toe, zodat het aan tafel gezellig blijft.",
     "s1n": "{cap}",
-    "s1": "gasten max. per avond",
+    "s1": "gasten per avond, maximaal",
     "s2n": "3 uur",
-    "s2": "gouden uur, muziek & verf",
+    "s2": "schilderen, drankjes en muziek",
     "s3n": "1",
-    "s3": "deurmat, door jou gemaakt",
+    "s3": "deurmat om mee te nemen",
     "imgAlt": "Cocktail bij zonsondergang onder de palmbomen op Curaçao"
   },
   "exp": {
-    "eyebrow": "De ervaring",
-    "title": "Jouw avond, tot in de puntjes verzorgd.",
-    "c1t": "Maak je eigen deurmat",
-    "c1": "Kies een ontwerp — tropische bladeren, de skyline van Curaçao, je familienaam, “Bon Bini” — of ga freestyle. Onze hosts begeleiden je stap voor stap. Talent niet nodig; sjablonen en alle materialen zijn inbegrepen.",
+    "eyebrow": "De paint-&-sip-avond",
+    "title": "Wat je van de avond kunt verwachten",
+    "c1t": "Schilder je eigen deurmat",
+    "c1": "Kies een sjabloon (palmbladeren, de skyline van de Handelskade, “Bon Bini”, je familienaam) of kom met je eigen idee. Deurmat, verf, kwasten en schort zijn inbegrepen en een host helpt je bij elke stap.",
     "c1alt": "Gast schildert een ontwerp tijdens een paint-and-sip-avond",
-    "c2t": "Sip & geniet van lokale hapjes",
-    "c2": "Begin met een welkomstdrankje en bestel daarna aan de bar terwijl de lucht goud kleurt. Upgrade je tafel met een hapjesplank, een fles van je favoriete drank of een shisha.",
+    "c2t": "Drankjes en lokale hapjes",
+    "c2": "Je begint met een welkomstdrankje. Daarna bestel je aan de bar cocktails, wijn of bier, en kun je voor je tafel een hapjesplank, een shisha of een fles bijboeken.",
     "c2alt": "Vrienden proosten met cocktails op Curaçao",
-    "c3t": "DJ & MC entertainment",
-    "c3": "Afro-Caribische grooves, soulvolle house en feelgood-klassiekers — onze DJ en MC houden de energie warm, nooit overweldigend. Een feest waarbij je elkaar nog verstaat.",
+    "c3t": "DJ en MC",
+    "c3": "Onze DJ draait Caribisch, afro en soulful house op een volume waarbij je elkaar nog verstaat. De MC houdt de vaart erin en zorgt dat niemand in z’n eentje zit te schilderen.",
     "c3alt": "DJ draait een sunset-set op een controller"
   },
   "flow": {
     "eyebrow": "De avond",
-    "title": "Zo verloopt de avond",
+    "title": "De avond van uur tot uur",
     "t1": "17:00",
     "t1t": "Aankomen & landen",
-    "t1d": "Check in bij het landhuis, pak je welkomstdrankje en zoek je plek aan de lange tafel.",
+    "t1d": "Check in bij het landhuis, haal je welkomstdrankje en zoek een plek aan de lange tafel.",
     "t2": "17:30",
     "t2t": "Ontwerp & eerste streken",
-    "t2d": "Kies je sjabloon of schets zelf. Je host doet de techniek voor en dan: kwasten omhoog.",
+    "t2d": "Kies je sjabloon of schets je eigen ontwerp. Je host doet de techniek voor en je gaat aan de slag.",
     "t3": "18:30",
-    "t3t": "Gouden uur",
-    "t3d": "De zon zakt, de lichtjes gaan aan, de DJ zet een tandje bij. Dít is het fotomoment.",
+    "t3t": "Zonsondergang",
+    "t3d": "Rond half zeven kleurt het licht goud. Dit is het moment waarop de meeste gasten hun foto’s maken.",
     "t4": "19:15",
-    "t4t": "Hapjes, beats & de laatste details",
-    "t4d": "De planken komen op tafel, de shisha’s gloeien en jouw deurmat krijgt de finishing touch.",
+    "t4t": "Hapjes en de laatste details",
+    "t4d": "De hapjesplanken en shisha’s komen op tafel terwijl jij je deurmat afmaakt.",
     "t5": "20:30",
     "t5t": "Mee naar huis",
-    "t5d": "Je deurmat is droog, ingepakt en kofferklaar. De nacht in Willemstad is nog jong."
+    "t5d": "Je deurmat is droog en ingepakt voor de reis. Wil je nog door? De bars van Pietermaai liggen op tien minuten."
   },
   "pk": {
     "eyebrow": "Pakketten & prijzen",
     "title": "Kies jouw Ambience",
-    "lead": "Eén all-in ticket voor de hele avond. Voeg een tafelupgrade toe als er iets te vieren valt.",
+    "lead": "Eén ticket voor de hele avond. Tafelupgrades zijn optioneel.",
     "soloTag": "Meest geboekt",
     "soloT": "Paint & Sip",
-    "soloD": "De complete sunset-ervaring, per persoon.",
+    "soloD": "Alles wat je voor de avond nodig hebt, per persoon.",
     "per": "per persoon",
     "groupTag": "Beste deal",
     "groupT": "Groep van {groupSize}",
-    "groupD": "Zes plaatsen naast elkaar aan de lange tafel — ideaal voor vrienden, familie en vrijgezellenfeesten.",
+    "groupD": "Zes plaatsen naast elkaar aan de lange tafel. Populair bij vriendengroepen, families en vrijgezellenfeesten.",
     "groupPer": "voor {groupSize} gasten",
     "groupSave": "Bespaar ${save} t.o.v. losse tickets",
     "inc": [
@@ -113,12 +113,12 @@
     "book": "Boek nu",
     "bookGroup": "Boek voor {groupSize}",
     "upT": "Tafelupgrades",
-    "upLead": "Toe te voegen aan elke boeking. Elke upgrade is om te delen met maximaal zes gasten.",
+    "upLead": "Bij te boeken tijdens het reserveren. Eén upgrade is genoeg voor een tafel van maximaal zes personen.",
     "hookahT": "Hookah & Bites",
-    "hookahD": "Een premium shisha in een smaak naar keuze en een gedeelde plank met warme en koude lokale hapjes.",
+    "hookahD": "Eén shisha in een smaak naar keuze en een plank met warme en koude hapjes om te delen.",
     "hookahAlt": "Gloeiende shisha in de avond",
     "bottleT": "Bottle, Hookah & Bites",
-    "bottleD": "De complete tafel: een fles premium sterkedrank met mixers en ijs, een shisha en de gedeelde plank met lokale hapjes.",
+    "bottleD": "Een fles premium sterkedrank met mixers en ijs, één shisha en de hapjesplank om te delen.",
     "bottleAlt": "Flessen en kaarslicht op een buitentafel in de avond",
     "perTable": "per tafel",
     "add": "Toevoegen bij het boeken",
@@ -127,12 +127,12 @@
   "pv": {
     "eyebrow": "Privé-events",
     "title": "Jouw locatie. Onze Ambience.",
-    "p": "Villa, bootdek, strandhuis of boardroom — wij komen met tafels, deurmatten, verf, hosts en muziek naar jou toe. Verjaardagen, vrijgezellenfeesten, teambuilding, bruiloftsweekenden en merkevents, overal op Curaçao.",
+    "p": "Wij komen met tafels, deurmatten, verf, hosts en muziek naar je villa, resort, boot of kantoor. Groepen boeken ons voor verjaardagen, vrijgezellenfeesten, bedrijfsuitjes en bruiloftsweekenden, overal op Curaçao.",
     "li": [
-      "Van 8 tot 60 gasten",
-      "In je villa, resort of venue — of een privéavond in het landhuis",
-      "Sjablonen op maat met jullie namen, logo of datum",
-      "Optioneel: bar, hapjes, shisha en DJ / MC"
+      "Groepen van 8 tot 60 personen",
+      "Op jouw locatie, of een besloten avond in het landhuis",
+      "Sjablonen met jullie namen, logo of datum",
+      "Bar, hapjes, shisha en DJ of MC op aanvraag"
     ],
     "formT": "Vraag een privé-event aan",
     "name": "Je naam",
@@ -149,81 +149,85 @@
     "alt": "Privédiner bij kaarslicht aan een buitentafel"
   },
   "gal": {
-    "eyebrow": "De sfeer",
-    "title": "Elke avond gouden uur.",
+    "eyebrow": "Foto’s",
+    "title": "Een indruk van de avond",
     "a1": "Gasten schilderen samen aan een lange tafel",
     "a2": "Zonsondergang boven de kust van Curaçao",
     "a3": "Gedeelde plank met lokale hapjes",
     "a4": "Handbeschilderde kokosdeurmat bij een voordeur",
     "a5": "Vrienden heffen het glas",
-    "note": "Beelden ter illustratie — foto’s van onze eigen avonden vind je op Instagram."
+    "note": "Een deel van de foto’s op deze pagina is ter illustratie. Onze eigen avonden zie je op Instagram."
   },
   "loc": {
     "eyebrow": "Hier vind je ons",
-    "title": "Een landhuisavond in Saliña",
-    "p": "De landhuizen van Curaçao zijn de statige plantagehuizen uit de 18e eeuw. Het onze ligt in Saliña, het levendige hart van Willemstad — tien minuten van Punda, Pietermaai en de cruiseterminals, een kwartier van Jan Thiel en Mambo Beach.",
+    "title": "Je vindt ons in Saliña",
+    "p": "Een landhuis is een van de historische plantagehuizen van Curaçao. Het onze staat in Saliña, midden in Willemstad: ongeveer tien minuten rijden van Punda, Pietermaai en de cruiseterminals, en een kwartier van Jan Thiel en Mambo Beach.",
     "l1t": "Wanneer",
     "l1": "Donderdag t/m zondag · inchecken 17:00 uur · ervaring 17:30 – 20:30 uur",
     "l2t": "Waar",
-    "l2": "Landhuis in Saliña, Willemstad, Curaçao. Het exacte adres en parkeerinformatie ontvang je bij je bevestiging.",
+    "l2": "Landhuis in Saliña, Willemstad, Curaçao. Het exacte adres en de routebeschrijving sturen we je na je boeking.",
     "l3t": "Zo kom je er",
-    "l3": "Gratis parkeren op het terrein. Een taxi vanaf de meeste hotels duurt 10 – 15 minuten; we regelen graag je rit terug.",
+    "l3": "Je kunt parkeren bij het landhuis. Een taxi vanaf de meeste hotels doet er 10 tot 15 minuten over, en we bellen er graag een voor de terugweg.",
     "map": "Open in Google Maps",
     "alt": "De verlichte waterkant van Willemstad, Curaçao, in de avond"
   },
   "faq": {
-    "eyebrow": "Goed om te weten",
+    "eyebrow": "Voordat je boekt",
     "title": "Veelgestelde vragen",
     "items": [
       {
         "q": "Wat is Ambience Curaçao?",
-        "a": "Ambience is een paint-&-sip-ervaring bij zonsondergang in Willemstad, Curaçao. In drie uur ontwerp en schilder je je eigen kokosdeurmat, met drankjes, lokale hapjes en een live DJ in een historisch landhuis in Saliña. Elke donderdag t/m zondag van 17:30 tot 20:30 uur, inchecken vanaf 17:00 uur."
+        "a": "Ambience is een paint-&-sip-avond bij zonsondergang in Willemstad, Curaçao. In plaats van een doek beschilder je een kokosdeurmat die je mee naar huis neemt. Bij de avond horen een welkomstdrankje, een DJ en een MC. We zijn er van donderdag tot en met zondag van 17:30 tot 20:30 uur in een landhuis in Saliña; inchecken kan vanaf 17:00 uur."
       },
       {
         "q": "Wat kost het?",
-        "a": "Tickets kosten ${pp} per persoon. Een groep van {groupSize} betaalt in totaal ${group}. Inbegrepen: de deurmat, alle materialen, begeleiding, een welkomstdrankje en DJ / MC entertainment. Tafelupgrades met shisha, hapjes en een fles zijn optioneel."
+        "a": "Een ticket kost ${pp} per persoon. Een groep van {groupSize} betaalt samen ${group}. Daarvoor krijg je je deurmat, alle materialen, begeleiding van een host, een welkomstdrankje en de DJ en MC. Tafelupgrades met shisha, hapjes en een fles zijn optioneel."
       },
       {
-        "q": "Moet ik goed kunnen schilderen?",
-        "a": "Helemaal niet. We werken met sjablonen en een eenvoudige deptechniek, en je host begeleidt elke stap. De meeste gasten hebben nog nooit geschilderd — en elke deurmat gaat prachtig mee naar huis."
+        "q": "Moet ik kunnen schilderen?",
+        "a": "Nee. We werken met sjablonen en een eenvoudige deptechniek, en een host helpt je bij elke stap. De meeste gasten hebben nog nooit geschilderd."
       },
       {
         "q": "Is er een leeftijdsgrens?",
-        "a": "Ja. Ambience is een avond voor volwassenen met alcohol en shisha, dus alle gasten moeten {age} jaar of ouder zijn. Neem een geldig legitimatiebewijs mee."
+        "a": "Ja. We schenken alcohol en serveren shisha, dus iedere gast moet {age} jaar of ouder zijn. Neem een geldig legitimatiebewijs mee."
+      },
+      {
+        "q": "Is het leuk voor een date of een vrijgezellenfeest?",
+        "a": "Ja. Stellen boeken meestal twee plaatsen aan de lange tafel. Een groep van {groupSize} betaalt samen ${group}, en voor grotere vrijgezellenfeesten, verjaardagen of bedrijfsuitjes verzorgen we een besloten avond of komen we naar je villa."
       },
       {
         "q": "Kan mijn deurmat mee in het vliegtuig?",
-        "a": "Ja. De deurmat is 40 × 60 cm, past plat in een standaardkoffer en weegt ongeveer 1,5 kg. De verf is aan het eind van de avond droog en we pakken hem reisklaar in."
+        "a": "Ja. De deurmat is 40 × 60 cm en past plat in een gewone koffer. De verf is aan het eind van de avond droog en wij pakken de mat in voor de reis."
       },
       {
         "q": "Ik kom met een cruiseschip. Kan ik meedoen?",
-        "a": "Als je schip ’s avonds in de haven blijft: ja. Het landhuis ligt op zo’n tien minuten met de taxi van de Mega Pier en de Mathey Werf. Check vóór het boeken je all-aboard-tijd; de ervaring eindigt om 20:30 uur."
+        "a": "Ja, als je schip ’s avonds in de haven blijft. Het landhuis ligt op ongeveer tien minuten met de taxi van de Mega Pier en de Mathey Werf. Controleer voor het boeken hoe laat je aan boord moet zijn: de avond eindigt om 20:30 uur."
       },
       {
-        "q": "Hoeveel mensen kunnen er per avond meedoen?",
-        "a": "We houden het intiem: maximaal {cap} gasten per avond. Populaire data raken uitverkocht, dus boek bij voorkeur vóór vertrek."
+        "q": "Hoeveel mensen doen er per avond mee?",
+        "a": "Maximaal {cap}. De weekenden raken het eerst vol, dus boek bij voorkeur voordat je vertrekt."
       },
       {
         "q": "Wat als het regent?",
-        "a": "Curaçao is vrijwel het hele jaar zonnig en buien trekken snel over. Het landhuis heeft overdekte terrassen, dus de avond gaat gewoon door. Moeten wij toch annuleren, dan kies je zelf: een nieuwe datum of je geld terug."
+        "a": "Buien op Curaçao duren meestal kort en het landhuis heeft overdekte terrassen, dus de avond gaat door. Moeten wij toch annuleren, dan kies je zelf tussen een andere datum en je geld terug."
       },
       {
         "q": "Kan ik mijn boeking annuleren of wijzigen?",
-        "a": "Tot 48 uur voor je avond kun je kosteloos omboeken of annuleren. Binnen 48 uur is restitutie niet meer mogelijk, maar je mag je plek wel aan iemand anders geven."
+        "a": "Tot 48 uur voor je avond kun je kosteloos wijzigen of annuleren. Daarna krijg je geen geld meer terug, maar je mag je plek wel aan iemand anders geven."
       },
       {
         "q": "Wat trek ik aan?",
-        "a": "Island chic. Je krijgt een schort van ons, maar acrylverf is permanent — bewaar dat witte linnen dus voor een andere avond."
+        "a": "Wat je ook zou aantrekken voor een borrel op een terras. Je krijgt een schort, maar acrylverf gaat er niet meer uit, dus laat je mooiste witte linnen in het hotel."
       }
     ]
   },
   "cta": {
-    "title": "Je mooiste avond op Curaçao begint om vijf uur.",
-    "p": "Slechts {cap} plaatsen per avond. Reserveer vóór je vertrekt.",
+    "title": "Maximaal {cap} gasten per avond.",
+    "p": "Boek je datum voordat je vertrekt. Donderdag tot en met zondag, vanaf ${pp} per persoon.",
     "btn": "Boek je avond"
   },
   "ft": {
-    "tag": "Paint & sip bij zonsondergang · Willemstad, Curaçao",
+    "tag": "Paint & sip bij zonsondergang in Willemstad, Curaçao",
     "explore": "Ontdek",
     "contact": "Contact",
     "visit": "Bezoek",
@@ -231,7 +235,8 @@
     "addr": "Landhuis, Saliña, Willemstad, Curaçao",
     "age": "Ambience is een {age}+ ervaring. Geniet, maar drink met mate.",
     "rights": "Alle rechten voorbehouden.",
-    "wa": "Stuur een WhatsApp"
+    "wa": "Stuur een WhatsApp",
+    "guides": "Ideeën"
   },
   "sticky": {
     "from": "Vanaf ${pp} p.p.",
@@ -297,7 +302,7 @@
   },
   "ok": {
     "title": "Je staat op de lijst.",
-    "p": "Dank je — je betaling is ontvangen en je plaatsen bij Ambience zijn gereserveerd. Een bevestiging met het exacte adres, parkeerinformatie en wat je meeneemt is onderweg naar je inbox.",
+    "p": "Dank je wel. Je betaling is gelukt en je plaatsen zijn gereserveerd. Je betaalbewijs komt per e-mail, en vóór je avond sturen we je het exacte adres en de routebeschrijving.",
     "when": "Jouw avond",
     "guests": "Gasten",
     "paid": "Betaald",
@@ -312,8 +317,8 @@
     "unverified": "Heb je net betaald? Dan is je bevestigingsmail onderweg en zijn je plaatsen veilig. Heb je de betaling niet afgerond, dan is er niets afgeschreven — je kunt gewoon opnieuw boeken."
   },
   "nf": {
-    "title": "Deze pagina is met de zon ondergegaan.",
-    "p": "De pagina die je zoekt bestaat niet.",
+    "title": "Deze pagina kunnen we niet vinden.",
+    "p": "De link is misschien verouderd, of de pagina is verplaatst.",
     "home": "Terug naar home"
   },
   "days": [
@@ -324,5 +329,155 @@
     "do",
     "vr",
     "za"
+  ],
+  "lp": {
+    "home": "Home",
+    "book": "Boek je avond",
+    "priv": "Vraag een besloten event aan",
+    "faq": "Vragen",
+    "more": "Meer ideeën"
+  },
+  "pages": [
+    {
+      "key": "night",
+      "slug": "wat-te-doen-op-curacao-avond",
+      "image": "hero",
+      "cta": "book",
+      "title": "Wat te doen op Curaçao in de avond: 7 tips | Ambience",
+      "description": "Zeven tips voor je avond op Curaçao: van Punda Vibes en de bars van Pietermaai tot een paint-&-sip-avond bij zonsondergang in een landhuis in Willemstad.",
+      "nav": "Wat te doen op Curaçao in de avond",
+      "eyebrow": "Avondgids",
+      "h1": "Wat te doen op Curaçao in de avond",
+      "intro": "Iedereen komt voor de stranden, maar Curaçao is na zonsondergang minstens zo leuk. Dit zijn de avonden die wij onze eigen gasten aanraden, die van ons inbegrepen.",
+      "sections": [
+        {
+          "h": "1. Schilder je eigen deurmat bij zonsondergang",
+          "p": "Van donderdag tot en met zondag organiseert Ambience een paint-&-sip-avond in een landhuis in Saliña. Je beschildert een kokosmat met een welkomstdrankje in de hand terwijl een DJ draait, en om 20:30 uur ben je klaar en ligt de rest van de avond nog voor je. Tickets kosten ${pp} en er kunnen maximaal {cap} gasten per avond terecht."
+        },
+        {
+          "h": "2. Punda Vibes op donderdag",
+          "p": "Elke donderdagavond verandert de oude binnenstad van Punda in een gratis straatfeest met livemuziek, lokale kunst, eetkraampjes en vuurwerk. Nergens kom je makkelijker tussen de Curaçaoënaars zelf."
+        },
+        {
+          "h": "3. Over de Koningin Emmabrug in het donker",
+          "p": "De drijvende pontonbrug tussen Punda en Otrobanda is ’s avonds verlicht, met de Handelskade erachter. Het kost niets, duurt tien minuten en levert de foto op die bijna iedereen mee naar huis neemt."
+        },
+        {
+          "h": "4. Kroegentocht door Pietermaai",
+          "p": "In de gerestaureerde stadsvilla’s van Pietermaai zitten de meeste cocktailbars en livemuziekcafés van Willemstad, allemaal op loopafstand van elkaar."
+        },
+        {
+          "h": "5. Zeilen bij zonsondergang",
+          "p": "Verschillende aanbieders varen met een catamaran langs de kust en komen na zonsondergang terug, meestal met drankjes en hapjes aan boord."
+        },
+        {
+          "h": "6. Dansen bij Jan Thiel of Mambo Beach",
+          "p": "In het weekend veranderen de beachclubs van Jan Thiel en Mambo Beach ’s avonds in een dansvloer in de openlucht, met DJ’s en je voeten in het zand."
+        },
+        {
+          "h": "7. De muurschilderingen van Otrobanda",
+          "p": "Met een gids loop je ’s avonds, als de hitte uit de dag is, langs de street art van Otrobanda."
+        },
+        {
+          "h": "Zo combineer je ze",
+          "p": "Ambience is om 20:30 uur afgelopen. Daarna heb je nog alle tijd voor een diner of een borrel in Pietermaai, en op donderdag pak je onderweg Punda Vibes nog mee."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hoe laat gaat de zon onder op Curaçao?",
+          "a": "Tussen ongeveer 18:15 uur in de winter en 19:00 uur in de zomer. Curaçao ligt dicht bij de evenaar, dus dat tijdstip verandert door het jaar heen weinig."
+        },
+        {
+          "q": "Moet ik avondactiviteiten vooraf boeken?",
+          "a": "Voor Ambience wel: er kunnen maximaal {cap} gasten per avond terecht en de weekenden raken het eerst vol. Voor de bars en Punda Vibes hoef je niets te reserveren."
+        }
+      ]
+    },
+    {
+      "key": "bachelorette",
+      "slug": "vrijgezellenfeest-curacao",
+      "image": "cheers",
+      "cta": "private",
+      "title": "Vrijgezellenfeest op Curaçao: paint-&-sip-avond | Ambience",
+      "description": "Vrijgezellenfeest op Curaçao organiseren? Boek een paint-&-sip-avond voor de hele groep: zes plaatsen voor ${group}, besloten avonden en events in je villa op aanvraag.",
+      "nav": "Vrijgezellenfeest op Curaçao",
+      "eyebrow": "Voor groepen",
+      "h1": "Vrijgezellenfeest op Curaçao",
+      "intro": "Met een paint-&-sip-avond heeft de hele groep samen iets te doen voordat jullie de stad in gaan, en de bruid gaat naar huis met een deurmat die haar vriendinnen hebben beschilderd.",
+      "sections": [
+        {
+          "h": "Zo boek je als groep",
+          "p": "Zes plaatsen kosten samen ${group}, dus $62,50 per persoon. Grotere groepen nemen meerdere sets van zes aan dezelfde lange tafel, tot maximaal {cap} gasten per avond. Boek de upgrade Bottle, Hookah & Bites erbij als de tafel er feestelijk bij moet staan."
+        },
+        {
+          "h": "Liever besloten?",
+          "p": "Voor een feest met alleen jullie eigen groep boek je een besloten avond in het landhuis, of komen wij naar jullie villa met tafels, deurmatten, verf, hosts en een DJ. Op verzoek maken we sjablonen met de namen van het bruidspaar en de trouwdatum."
+        },
+        {
+          "h": "Ideeën voor de deurmatten",
+          "items": [
+            "Eén gezamenlijke deurmat voor het nieuwe huis van het bruidspaar, door iedereen gesigneerd",
+            "Bij elkaar passende deurmatten met de trouwdatum",
+            "Een verrassingsontwerp dat de bruid pas ziet als ze gaat zitten"
+          ]
+        },
+        {
+          "h": "Na half negen",
+          "p": "De avond eindigt om 20:30 uur. De bars van Pietermaai liggen op ongeveer tien minuten met de taxi."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is er een minimale groepsgrootte?",
+          "a": "Niet voor de gewone avonden: je boekt zoveel plaatsen als je wilt, tot maximaal {cap}. Besloten events kunnen vanaf 8 personen."
+        },
+        {
+          "q": "Moet iedereen {age} jaar zijn?",
+          "a": "Ja. We schenken alcohol en serveren shisha, dus iedere gast moet {age} jaar of ouder zijn en een geldig legitimatiebewijs meenemen."
+        }
+      ]
+    },
+    {
+      "key": "team",
+      "slug": "bedrijfsuitje-curacao",
+      "image": "table",
+      "cta": "private",
+      "title": "Bedrijfsuitje op Curaçao: creatieve teambuilding | Ambience",
+      "description": "Een creatief bedrijfsuitje op Curaçao: beschilder samen deurmatten in een landhuis of bij jullie op kantoor. Voor 8 tot 60 collega’s, met jullie logo op het sjabloon.",
+      "nav": "Bedrijfsuitje op Curaçao",
+      "eyebrow": "Voor bedrijven",
+      "h1": "Bedrijfsuitje en teambuilding op Curaçao",
+      "intro": "Een personeelsuitje slaagt als mensen in gesprek raken met collega’s die ze anders nauwelijks spreken. Naast elkaar schilderen aan één lange tafel zorgt daarvoor, zonder vertrouwensoefeningen of quizmaster.",
+      "sections": [
+        {
+          "h": "Zo ziet een teamavond eruit",
+          "p": "Je team komt binnen, krijgt een drankje en schuift aan de lange tafel aan. Een host legt de sjabloontechniek uit, op de achtergrond draait een DJ, en twee tot drie uur later heeft iedereen een deurmat voor de eigen voordeur of voor op kantoor."
+        },
+        {
+          "h": "In het landhuis of bij jullie op kantoor",
+          "p": "Boek een besloten avond in het landhuis in Saliña, of laat ons naar jullie toe komen. Wij nemen tafels, deurmatten, verf, schorten en hosts mee en laten de ruimte achter zoals we hem aantroffen."
+        },
+        {
+          "h": "Praktisch",
+          "items": [
+            "Groepen van 8 tot 60 personen",
+            "Sjablonen met jullie logo of kernwaarden",
+            "Bar, hapjes en DJ zijn optioneel",
+            "Andere dagen en tijden op aanvraag"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Hoe ver van tevoren moeten we boeken?",
+          "a": "Zo vroeg mogelijk. Besloten events plannen we om onze vaste avonden van donderdag tot en met zondag heen, dus populaire data zijn het eerst weg."
+        },
+        {
+          "q": "Kunnen jullie ons logo op de deurmatten zetten?",
+          "a": "Ja. Stuur ons het logo als vectorbestand, dan snijden wij er een sjabloon van voor jullie team."
+        }
+      ]
+    }
   ]
 }
