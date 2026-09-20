@@ -136,10 +136,10 @@
   if (!dlg) return;
   var contactUrl = function (text) {
     return D.contact.whatsapp ? 'https://wa.me/' + D.contact.whatsapp + '?text=' + encodeURIComponent(text)
-      : 'mailto:' + D.contact.email + '?subject=' + encodeURIComponent(T.title) + '&body=' + encodeURIComponent(text);
+      : !D.contact.email ? '' : 'mailto:' + D.contact.email + '?subject=' + encodeURIComponent(T.title) + '&body=' + encodeURIComponent(text);
   };
   if (!dlg.showModal) {
-    document.addEventListener('click', function (e) { if (e.target.closest('[data-book]')) { e.preventDefault(); window.location.href = contactUrl(T.title); } });
+    document.addEventListener('click', function (e) { if (e.target.closest('[data-book]') && contactUrl(T.title)) { e.preventDefault(); window.location.href = contactUrl(T.title); } });
     return;
   }
   var elBody = $('#bkBody'), elSum = $('#bkSum'), elErr = $('#bkErr'), elNext = $('#bkNext'), elBack = $('#bkBack'), elSteps = $$('#bkSteps li');
@@ -345,7 +345,7 @@
         S.busy = false; render(true);
         var addons = ['hookah', 'bottle'].filter(function (k) { return S.addons[k]; }).map(function (k) { return D.addons[k].name + ' × ' + S.addons[k]; }).join(', ') || '—';
         var text = tr(T.waMsg, { guests: S.guests, date: summary.date, name: S.f.name, addons: addons, total: summary.total });
-        fail(T.errPay, '<br><a target="_blank" rel="noopener" href="' + esc(contactUrl(text)) + '">' + esc(D.contact.whatsapp ? T.waFallback : T.mailFallback) + ' →</a>');
+        fail(T.errPay, !contactUrl(text) ? '' : '<br><a target="_blank" rel="noopener" href="' + esc(contactUrl(text)) + '">' + esc(D.contact.whatsapp ? T.waFallback : T.mailFallback) + ' →</a>');
       });
   }
 

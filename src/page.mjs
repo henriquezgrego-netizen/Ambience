@@ -123,8 +123,8 @@ function footer({ t, cfg, lang, pathOf }) {
     <div>
       <h3>${t.ft.contact}</h3>
       ${wa ? `<a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener">${ic.wa}<span>${c.whatsappDisplay}</span></a>` : ``}
-      <a href="mailto:${c.email}">${ic.mail}<span>${c.email}</span></a>
-      <a href="${c.instagram}" target="_blank" rel="noopener">${ic.ig}<span>Instagram</span></a>
+      ${c.email ? `<a href="mailto:${c.email}">${ic.mail}<span>${c.email}</span></a>` : ``}
+      <a href="${c.instagram}" target="_blank" rel="noopener">${ic.ig}<span>${c.instagramHandle || 'Instagram'}</span></a>
     </div>
   </div>
   <div class="wrap footer-base">
@@ -150,7 +150,7 @@ export function renderHome(ctx) {
     url: cfg.siteUrl + pathOf(lang),
     image: [cfg.siteUrl + '/assets/og-image.jpg'],
     logo: cfg.siteUrl + '/assets/icon-512.png',
-    email: c.email,
+    ...(c.email ? { email: c.email } : {}),
     ...(placeholderPhone ? {} : { telephone: '+' + c.whatsapp }),
     priceRange: `$${p.perPerson} – $${p.groupPrice}`,
     currenciesAccepted: 'USD',
@@ -462,7 +462,7 @@ ${header({ ...ctx, home: pathOf(lang) })}
     <ul class="ticks">${t.ok.tips.map((x) => `<li>${ic.check}<span>${x}</span></li>`).join('')}</ul>
     <div class="hero-cta">
       <a class="btn btn-gold" href="${pathOf(lang)}">${t.ok.home}</a>
-      ${hasWhatsapp(cfg) ? `<a class="btn btn-line" href="https://wa.me/${cfg.contact.whatsapp}" target="_blank" rel="noopener">${ic.wa}${t.ok.cal}</a>` : `<a class="btn btn-line" href="mailto:${cfg.contact.email}">${ic.mail}${cfg.contact.email}</a>`}
+      ${hasWhatsapp(cfg) ? `<a class="btn btn-line" href="https://wa.me/${cfg.contact.whatsapp}" target="_blank" rel="noopener">${ic.wa}${t.ok.cal}</a>` : (cfg.contact.email ? `<a class="btn btn-line" href="mailto:${cfg.contact.email}">${ic.mail}${cfg.contact.email}</a>` : ``)}
     </div>
   </div>
 </main>

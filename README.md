@@ -26,7 +26,7 @@ After any change run `npm run build` (output in `dist/`).
 
 ## Before going live — checklist
 
-1. `src/config.json`: real **WhatsApp number**, **email**, **Instagram**, **domain** (`siteUrl`) and Google Maps link. The build prints a warning while placeholders remain.
+1. `src/config.json`: WhatsApp and Instagram are real. Still open: a public **email** (`contact.email` is empty, so no email is shown anywhere), your own **domain** (`siteUrl`) and the exact Google Maps link. The build prints a warning while placeholders remain.
 2. Confirm the **upgrade prices** (`addons.hookah` = $95, `addons.bottle` = $220 are placeholders) and the inclusions/policies in the text (welcome drink, doormat size, 48-hour cancellation, free parking, private events 8–60 guests).
 3. Replace the stock photos (`images` in `src/config.json` are Unsplash photo IDs) with photos of the real landhuis and evenings. To use your own files, put them in `src/assets/` and adapt `img()` in `src/page.mjs`.
 4. Deployed on Netlify as project `ambience-curacao` → https://ambience-curacao.netlify.app (build settings live in `netlify.toml`). The project is linked to https://github.com/henriquezgrego-netizen/Ambience — **every push to `main` deploys automatically**. When you connect your own domain, update `siteUrl` in `src/config.json` and push.

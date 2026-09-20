@@ -10,11 +10,20 @@
     "groupPrice": 375
   },
   "addons": {
-    "hookah": { "price": 95 },
-    "bottle": { "price": 220 }
+    "hookah": {
+      "price": 95
+    },
+    "bottle": {
+      "price": 220
+    }
   },
   "schedule": {
-    "weekdays": [4, 5, 6, 0],
+    "weekdays": [
+      4,
+      5,
+      6,
+      0
+    ],
     "checkIn": "17:00",
     "start": "17:30",
     "end": "20:30",
@@ -23,14 +32,15 @@
     "sameDayCutoffHour": 14
   },
   "contact": {
-    "email": "hello@ambiencecuracao.com",
-    "whatsapp": "59990000000",
-    "whatsappDisplay": "+599 9 000 0000",
-    "instagram": "https://www.instagram.com/ambiencecuracao",
+    "email": "",
+    "whatsapp": "59996742969",
+    "whatsappDisplay": "+599 9 674 2969",
+    "instagram": "https://www.instagram.com/_ambienceevent_/",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sali%C3%B1a%2C+Willemstad%2C+Cura%C3%A7ao",
     "street": "Saliña",
     "city": "Willemstad",
-    "country": "CW"
+    "country": "CW",
+    "instagramHandle": "@_ambienceevent_"
   },
   "images": {
     "hero": "photo-1574482211311-45a2169db57c",

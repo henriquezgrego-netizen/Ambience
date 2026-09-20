@@ -64,6 +64,7 @@ out('_headers', `/assets/*\n  Cache-Control: public, max-age=604800\n/*\n  X-Con
 
 const placeholders = [];
 if (!hasWhatsapp(cfg)) placeholders.push('contact.whatsapp (WhatsApp buttons stay hidden until it is real)');
+if (!cfg.contact.email) placeholders.push('contact.email (empty: no email is shown on the site)');
 if (cfg.siteUrl.includes('netlify.app')) placeholders.push('siteUrl (switch to your own domain once it is connected)');
 console.log(`built ${langs.length} languages -> ${DIST}/`);
 if (placeholders.length) console.warn('! placeholder values still in src/config.json:', placeholders.join(', '));
